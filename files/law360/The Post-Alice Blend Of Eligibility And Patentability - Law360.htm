@@ -1,0 +1,244 @@
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+<script>window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"d4a97ca1fb","applicationID":"508316","transactionName":"dVhXEkFaCV5cSh5VQkJeWgpWRkpCS1FfQA==","queueTime":0,"applicationTime":26,"agent":""}</script>
+<script>(window.NREUM||(NREUM={})).loader_config={xpid:"VQcFVldUGwYAXFJTAQ=="};window.NREUM||(NREUM={}),__nr_require=function(t,n,e){function r(e){if(!n[e]){var o=n[e]={exports:{}};t[e][0].call(o.exports,function(n){var o=t[e][1][n];return r(o||n)},o,o.exports)}return n[e].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<e.length;o++)r(e[o]);return r}({1:[function(t,n,e){function r(t){try{s.console&&console.log(t)}catch(n){}}var o,i=t("ee"),a=t(15),s={};try{o=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(s.console=!0,o.indexOf("dev")!==-1&&(s.dev=!0),o.indexOf("nr_dev")!==-1&&(s.nrDev=!0))}catch(c){}s.nrDev&&i.on("internal-error",function(t){r(t.stack)}),s.dev&&i.on("fn-err",function(t,n,e){r(e.stack)}),s.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(s,function(t,n){return t}).join(", ")))},{}],2:[function(t,n,e){function r(t,n,e,r,s){try{p?p-=1:o(s||new UncaughtException(t,n,e),!0)}catch(f){try{i("ierr",[f,c.now(),!0])}catch(d){}}return"function"==typeof u&&u.apply(this,a(arguments))}function UncaughtException(t,n,e){this.message=t||"Uncaught error with no additional information",this.sourceURL=n,this.line=e}function o(t,n){var e=n?null:c.now();i("err",[t,e])}var i=t("handle"),a=t(16),s=t("ee"),c=t("loader"),f=t("gos"),u=window.onerror,d=!1,l="nr@seenError",p=0;c.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(h){"stack"in h&&(t(8),t(7),"addEventListener"in window&&t(5),c.xhrWrappable&&t(9),d=!0)}s.on("fn-start",function(t,n,e){d&&(p+=1)}),s.on("fn-err",function(t,n,e){d&&!e[l]&&(f(e,l,function(){return!0}),this.thrown=!0,o(e))}),s.on("fn-end",function(){d&&!this.thrown&&p>0&&(p-=1)}),s.on("internal-error",function(t){i("ierr",[t,c.now(),!0])})},{}],3:[function(t,n,e){t("loader").features.ins=!0},{}],4:[function(t,n,e){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var o=t("ee"),i=t("handle"),a=t(8),s=t(7),c="learResourceTimings",f="addEventListener",u="resourcetimingbufferfull",d="bstResource",l="resource",p="-start",h="-end",m="fn"+p,w="fn"+h,v="bstTimer",y="pushState",g=t("loader");g.features.stn=!0,t(6);var b=NREUM.o.EV;o.on(m,function(t,n){var e=t[0];e instanceof b&&(this.bstStart=g.now())}),o.on(w,function(t,n){var e=t[0];e instanceof b&&i("bst",[e,n,this.bstStart,g.now()])}),a.on(m,function(t,n,e){this.bstStart=g.now(),this.bstType=e}),a.on(w,function(t,n){i(v,[n,this.bstStart,g.now(),this.bstType])}),s.on(m,function(){this.bstStart=g.now()}),s.on(w,function(t,n){i(v,[n,this.bstStart,g.now(),"requestAnimationFrame"])}),o.on(y+p,function(t){this.time=g.now(),this.startPath=location.pathname+location.hash}),o.on(y+h,function(t){i("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),f in window.performance&&(window.performance["c"+c]?window.performance[f](u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["c"+c]()},!1):window.performance[f]("webkit"+u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["webkitC"+c]()},!1)),document[f]("scroll",r,{passive:!0}),document[f]("keypress",r,!1),document[f]("click",r,!1)}},{}],5:[function(t,n,e){function r(t){for(var n=t;n&&!n.hasOwnProperty(u);)n=Object.getPrototypeOf(n);n&&o(n)}function o(t){s.inPlace(t,[u,d],"-",i)}function i(t,n){return t[1]}var a=t("ee").get("events"),s=t(18)(a,!0),c=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";n.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(o(window),o(f.prototype)),a.on(u+"-start",function(t,n){var e=t[1],r=c(e,"nr@wrapped",function(){function t(){if("function"==typeof e.handleEvent)return e.handleEvent.apply(e,arguments)}var n={object:t,"function":e}[typeof e];return n?s(n,"fn-",null,n.name||"anonymous"):e});this.wrapped=t[1]=r}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],6:[function(t,n,e){var r=t("ee").get("history"),o=t(18)(r);n.exports=r,o.inPlace(window.history,["pushState","replaceState"],"-")},{}],7:[function(t,n,e){var r=t("ee").get("raf"),o=t(18)(r),i="equestAnimationFrame";n.exports=r,o.inPlace(window,["r"+i,"mozR"+i,"webkitR"+i,"msR"+i],"raf-"),r.on("raf-start",function(t){t[0]=o(t[0],"fn-")})},{}],8:[function(t,n,e){function r(t,n,e){t[0]=a(t[0],"fn-",null,e)}function o(t,n,e){this.method=e,this.timerDuration=isNaN(t[1])?0:+t[1],t[0]=a(t[0],"fn-",this,e)}var i=t("ee").get("timer"),a=t(18)(i),s="setTimeout",c="setInterval",f="clearTimeout",u="-start",d="-";n.exports=i,a.inPlace(window,[s,"setImmediate"],s+d),a.inPlace(window,[c],c+d),a.inPlace(window,[f,"clearImmediate"],f+d),i.on(c+u,r),i.on(s+u,o)},{}],9:[function(t,n,e){function r(t,n){d.inPlace(n,["onreadystatechange"],"fn-",s)}function o(){var t=this,n=u.context(t);t.readyState>3&&!n.resolved&&(n.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,y,"fn-",s)}function i(t){g.push(t),h&&(x?x.then(a):w?w(a):(E=-E,O.data=E))}function a(){for(var t=0;t<g.length;t++)r([],g[t]);g.length&&(g=[])}function s(t,n){return n}function c(t,n){for(var e in t)n[e]=t[e];return n}t(5);var f=t("ee"),u=f.get("xhr"),d=t(18)(u),l=NREUM.o,p=l.XHR,h=l.MO,m=l.PR,w=l.SI,v="readystatechange",y=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],g=[];n.exports=u;var b=window.XMLHttpRequest=function(t){var n=new p(t);try{u.emit("new-xhr",[n],n),n.addEventListener(v,o,!1)}catch(e){try{u.emit("internal-error",[e])}catch(r){}}return n};if(c(p,b),b.prototype=p.prototype,d.inPlace(b.prototype,["open","send"],"-xhr-",s),u.on("send-xhr-start",function(t,n){r(t,n),i(n)}),u.on("open-xhr-start",r),h){var x=m&&m.resolve();if(!w&&!m){var E=1,O=document.createTextNode(E);new h(a).observe(O,{characterData:!0})}}else f.on("fn-end",function(t){t[0]&&t[0].type===v||a()})},{}],10:[function(t,n,e){function r(t){var n=this.params,e=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<d;r++)t.removeEventListener(u[r],this.listener,!1);if(!n.aborted){if(e.duration=a.now()-this.startTime,4===t.readyState){n.status=t.status;var i=o(t,this.lastSize);if(i&&(e.rxSize=i),this.sameOrigin){var c=t.getResponseHeader("X-NewRelic-App-Data");c&&(n.cat=c.split(", ").pop())}}else n.status=0;e.cbTime=this.cbTime,f.emit("xhr-done",[t],t),s("xhr",[n,e,this.startTime])}}}function o(t,n){var e=t.responseType;if("json"===e&&null!==n)return n;var r="arraybuffer"===e||"blob"===e||"json"===e?t.response:t.responseText;return h(r)}function i(t,n){var e=c(n),r=t.params;r.host=e.hostname+":"+e.port,r.pathname=e.pathname,t.sameOrigin=e.sameOrigin}var a=t("loader");if(a.xhrWrappable){var s=t("handle"),c=t(11),f=t("ee"),u=["load","error","abort","timeout"],d=u.length,l=t("id"),p=t(14),h=t(13),m=window.XMLHttpRequest;a.features.xhr=!0,t(9),f.on("new-xhr",function(t){var n=this;n.totalCbs=0,n.called=0,n.cbTime=0,n.end=r,n.ended=!1,n.xhrGuids={},n.lastSize=null,p&&(p>34||p<10)||window.opera||t.addEventListener("progress",function(t){n.lastSize=t.loaded},!1)}),f.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),f.on("open-xhr-end",function(t,n){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&n.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),f.on("send-xhr-start",function(t,n){var e=this.metrics,r=t[0],o=this;if(e&&r){var i=h(r);i&&(e.txSize=i)}this.startTime=a.now(),this.listener=function(t){try{"abort"===t.type&&(o.params.aborted=!0),("load"!==t.type||o.called===o.totalCbs&&(o.onloadCalled||"function"!=typeof n.onload))&&o.end(n)}catch(e){try{f.emit("internal-error",[e])}catch(r){}}};for(var s=0;s<d;s++)n.addEventListener(u[s],this.listener,!1)}),f.on("xhr-cb-time",function(t,n,e){this.cbTime+=t,n?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof e.onload||this.end(e)}),f.on("xhr-load-added",function(t,n){var e=""+l(t)+!!n;this.xhrGuids&&!this.xhrGuids[e]&&(this.xhrGuids[e]=!0,this.totalCbs+=1)}),f.on("xhr-load-removed",function(t,n){var e=""+l(t)+!!n;this.xhrGuids&&this.xhrGuids[e]&&(delete this.xhrGuids[e],this.totalCbs-=1)}),f.on("addEventListener-end",function(t,n){n instanceof m&&"load"===t[0]&&f.emit("xhr-load-added",[t[1],t[2]],n)}),f.on("removeEventListener-end",function(t,n){n instanceof m&&"load"===t[0]&&f.emit("xhr-load-removed",[t[1],t[2]],n)}),f.on("fn-start",function(t,n,e){n instanceof m&&("onload"===e&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=a.now()))}),f.on("fn-end",function(t,n){this.xhrCbStart&&f.emit("xhr-cb-time",[a.now()-this.xhrCbStart,this.onload,n],n)})}},{}],11:[function(t,n,e){n.exports=function(t){var n=document.createElement("a"),e=window.location,r={};n.href=t,r.port=n.port;var o=n.href.split("://");!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=n.hostname||e.hostname,r.pathname=n.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname);var i=!n.protocol||":"===n.protocol||n.protocol===e.protocol,a=n.hostname===document.domain&&n.port===e.port;return r.sameOrigin=i&&(!n.hostname||a),r}},{}],12:[function(t,n,e){function r(){}function o(t,n,e){return function(){return i(t,[f.now()].concat(s(arguments)),n?null:this,e),n?void 0:this}}var i=t("handle"),a=t(15),s=t(16),c=t("ee").get("tracer"),f=t("loader"),u=NREUM;"undefined"==typeof window.newrelic&&(newrelic=u);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(d,function(t,n){u[n]=o(l+n,!0,"api")}),u.addPageAction=o(l+"addPageAction",!0),u.setCurrentRouteName=o(l+"routeName",!0),n.exports=newrelic,u.interaction=function(){return(new r).get()};var h=r.prototype={createTracer:function(t,n){var e={},r=this,o="function"==typeof n;return i(p+"tracer",[f.now(),t,e],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],e),o)try{return n.apply(this,arguments)}catch(t){throw c.emit("fn-err",[arguments,this,t],e),t}finally{c.emit("fn-end",[f.now()],e)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,n){h[n]=o(p+n)}),newrelic.noticeError=function(t){"string"==typeof t&&(t=new Error(t)),i("err",[t,f.now()])}},{}],13:[function(t,n,e){n.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(n){return}}}},{}],14:[function(t,n,e){var r=0,o=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);o&&(r=+o[1]),n.exports=r},{}],15:[function(t,n,e){function r(t,n){var e=[],r="",i=0;for(r in t)o.call(t,r)&&(e[i]=n(r,t[r]),i+=1);return e}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],16:[function(t,n,e){function r(t,n,e){n||(n=0),"undefined"==typeof e&&(e=t?t.length:0);for(var r=-1,o=e-n||0,i=Array(o<0?0:o);++r<o;)i[r]=t[n+r];return i}n.exports=r},{}],17:[function(t,n,e){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],18:[function(t,n,e){function r(t){return!(t&&t instanceof Function&&t.apply&&!t[a])}var o=t("ee"),i=t(16),a="nr@original",s=Object.prototype.hasOwnProperty,c=!1;n.exports=function(t,n){function e(t,n,e,o){function nrWrapper(){var r,a,s,c;try{a=this,r=i(arguments),s="function"==typeof e?e(r,a):e||{}}catch(f){l([f,"",[r,a,o],s])}u(n+"start",[r,a,o],s);try{return c=t.apply(a,r)}catch(d){throw u(n+"err",[r,a,d],s),d}finally{u(n+"end",[r,a,c],s)}}return r(t)?t:(n||(n=""),nrWrapper[a]=t,d(t,nrWrapper),nrWrapper)}function f(t,n,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<n.length;c++)s=n[c],a=t[s],r(a)||(t[s]=e(a,f?s+o:o,i,s))}function u(e,r,o){if(!c||n){var i=c;c=!0;try{t.emit(e,r,o,n)}catch(a){l([a,e,r,o])}c=i}}function d(t,n){if(Object.defineProperty&&Object.keys)try{var e=Object.keys(t);return e.forEach(function(e){Object.defineProperty(n,e,{get:function(){return t[e]},set:function(n){return t[e]=n,n}})}),n}catch(r){l([r])}for(var o in t)s.call(t,o)&&(n[o]=t[o]);return n}function l(n){try{t.emit("internal-error",n)}catch(e){}}return t||(t=o),e.inPlace=f,e.flag=a,e}},{}],ee:[function(t,n,e){function r(){}function o(t){function n(t){return t&&t instanceof r?t:t?c(t,s,i):i()}function e(e,r,o,i){if(!l.aborted||i){t&&t(e,r,o);for(var a=n(o),s=h(e),c=s.length,f=0;f<c;f++)s[f].apply(a,r);var d=u[y[e]];return d&&d.push([g,e,r,a]),a}}function p(t,n){v[t]=h(t).concat(n)}function h(t){return v[t]||[]}function m(t){return d[t]=d[t]||o(e)}function w(t,n){f(t,function(t,e){n=n||"feature",y[e]=n,n in u||(u[n]=[])})}var v={},y={},g={on:p,emit:e,get:m,listeners:h,context:n,buffer:w,abort:a,aborted:!1};return g}function i(){return new r}function a(){(u.api||u.feature)&&(l.aborted=!0,u=l.backlog={})}var s="nr@context",c=t("gos"),f=t(15),u={},d={},l=n.exports=o();l.backlog=u},{}],gos:[function(t,n,e){function r(t,n,e){if(o.call(t,n))return t[n];var r=e();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(t,n,e){function r(t,n,e,r){o.buffer([t],r),o.emit(t,n,e)}var o=t("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(t,n,e){function r(t){var n=typeof t;return!t||"object"!==n&&"function"!==n?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");n.exports=r},{}],loader:[function(t,n,e){function r(){if(!x++){var t=b.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&n))return u.abort();f(y,function(n,e){t[n]||(t[n]=e)}),c("mark",["onload",a()+b.offset],null,"api");var e=l.createElement("script");e.src="https://"+t.agent,n.parentNode.insertBefore(e,n)}}function o(){"complete"===l.readyState&&i()}function i(){c("mark",["domContent",a()+b.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(s=Math.max((new Date).getTime(),s))-b.offset}var s=(new Date).getTime(),c=t("handle"),f=t(15),u=t("ee"),d=window,l=d.document,p="addEventListener",h="attachEvent",m=d.XMLHttpRequest,w=m&&m.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:m,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1071.min.js"},g=m&&w&&w[p]&&!/CriOS/.test(navigator.userAgent),b=n.exports={offset:s,now:a,origin:v,features:{},xhrWrappable:g};t(12),l[p]?(l[p]("DOMContentLoaded",i,!1),d[p]("load",r,!1)):(l[h]("onreadystatechange",o),d[h]("onload",r)),c("mark",["firstbyte",s],null,"api");var x=0,E=t(17)},{}]},{},["loader",2,10,4,3]);</script>
+		<title>The Post-Alice Blend Of Eligibility And Patentability - Law360</title>
+		<style type="text/css" media="print" >
+		  <!--
+		  body {
+		    font-family:Verdana, Arial, Helvetica, sans-serif;
+		    font-size: 8pt;
+		    color: #000000;
+		    margin-left: .75in;
+		    margin-right: 0;
+		    margin-top: 0px;
+		    margin-bottom: 0;
+		    padding: 0;
+		  }
+		  -->
+		  </style>
+
+		  <style type="text/css" media="screen" >
+		  <!--
+		  body {
+		    font-family:Verdana, Arial, Helvetica, sans-serif;
+		    font-size: 10px;
+		    color: #000000;
+		    margin-left: 100px;
+		    margin-right: 20px;
+		    margin-top: 0px;
+		    margin-bottom: 20px;
+		    padding: 0px;
+		  }
+		  -->
+		  </style>
+
+		  <style type="text/css" media="screen,print" >
+		  <!--
+		  a, a:active, a:link, a:visited {  color: #000000; text-decoration: none;}
+		  a:hover {  text-decoration: underline;}
+
+		  h2 {
+		    font-family: Arial, sans-serif;
+		    font-size: 2.4em;
+		    line-height: 1.2em;
+		    font-weight: bold;
+		    margin-top: .5em;
+		    margin-bottom: .5em;
+		  }
+
+		  p {
+		    font-size: 1.2em;
+		    line-height: 2em;
+		    margin: 0 0 1.2em 0;
+		    text-indent: 0;
+		    text-align: justify;
+		  }
+
+		  .logo {
+		    text-align:right;
+		    margin-bottom: 0;
+		  }
+		  .publisher {
+		    text-align:right;
+		    font-size: 0.9em;
+		    line-height: 1.2em;	
+		    border-top: 1px solid #C4C4B6;
+		    border-bottom: 1px solid #C4C4B6;
+		    padding-top: .6em;
+		    padding-bottom: .6em;
+		  }
+
+		  .byLine {
+		  text-align:left;
+		  font-size:.9em !important;
+		  line-height:1em;
+		  padding-top:.3em;
+		  }
+
+		  .copyright {
+		    border-top: 1px solid #C4C4B6;
+		    font-size: .9em;
+		    line-height: 2.5em;	
+		  }
+			#PrintBody { font-size:13px; line-height:16px; }
+			
+			blockquote p {
+				line-height: 1em;
+				font-size: 1em;
+			}
+		  -->
+		</style>
+	</head>
+	<body class="printable">
+		<br/>
+	  		<p class="logo"><img alt="Law 360" height="100" src="https://d3o53eiyqmjn10.cloudfront.net/web/images/headings/logo.gif" width="205" /></p>
+	  	<p class="publisher"><b>Portfolio Media. Inc.</b> | 111 West 19th Street, 5th floor | New York, NY 10011 | www.law360.com<br />Phone: +1 646 783 7100 | Fax: +1 646 783 7161 | customerservice@law360.com</p>
+		    <h2>The Post-Alice Blend Of Eligibility And Patentability</h2>
+				<p class="byLine">By <b>Lewis Hudnell</b> (July 26, 2017, 12:13 PM EDT)</p>
+			<div id="PrintBody">
+				<table width="80" border="0" align="right" cellpadding="5" cellspacing="0"><tr><td><img src="https://dlbjbjzgnk95t.cloudfront.net/0944000/944437/1effd0abb6db095103d41c77f62fe8dfbc29ee83-hudnell.jpg" align="right" alt="Lewis Hudnell %>" style="margin: 5px 8px 0 8px; border: 1px solid #999; width: 120px;"/></td></tr><tr><td style="color:#999; text-align:center;font-size:12px;line-height:14px;padding-top:4px">Lewis Hudnell</td></tr></table>Although the <a href="/agencies/u-s-supreme-court">U.S. Supreme Court</a>&rsquo;s decision in Alice Corp. v. CLS Bank Int&rsquo;l set forth a two-part test for determining patent eligibility, both the Supreme Court and the Federal Circuit have drawn on other sections of the patent statute to determine eligibility. As a result, in many instances, patent-eligibility determinations have resembled patentability determinations. By blending different inquiries under the patent statute, Alice and its progeny have made determining what constitutes patent-eligible subject matter unclear and arguably made the patent system weaker.<br />
+<br />
+Section 101 expressly states that the categories of patent eligible subject matter are &ldquo;subject to the conditions and requirements of this title.&rdquo;[1] The conditions for patentability are &sect;&sect; 102 and 103, which are titled &ldquo;Conditions for patentability; novelty&rdquo; and &ldquo;Conditions for patentability; non-obvious subject matter,&rdquo; respectively.[2] Additional requirements for patentability are set forth in &sect;112, which includes the enablement requirement among others.[3]<br />
+<br />
+<span style="font-size:16px;"><strong>The Supreme Court</strong></span><br />
+<br />
+In determining whether an invention falls into a category of patent eligible subject matter, the Supreme Court long ago stated that the eligibility inquiry stands wholly apart from other inquiries, such as the novelty inquiry.[4] But in Mayo v. Prometheus Labs., the Supreme Court retreated from this view, commenting that the eligibility inquiry and the patentability inquiry &ldquo;might sometimes overlap.&rdquo;[5] Indeed, Mayo injected a novelty or obviousness-like inquiry into the eligibility analysis by finding that the challenged claims involved &ldquo;well-understood, routine, conventional activity&rdquo; and therefore were ineligible.[6] In fact, courts and commentators reading Mayo have compared this inquiry to an obviousness analysis under &sect; 103.[7] Drawing on Mayo, Alice applied this same inquiry in evaluating whether computer-implemented-intermediate-settlement claims recited an inventive concept.[8] As such, Alice introduced the use of patentability considerations to determine whether claims directed to an abstract idea are patent eligible.<br />
+<br />
+<span style="font-size:16px;"><strong>The Federal Circuit</strong></span><br />
+<br />
+Not surprisingly, the Federal Circuit followed the Supreme Court&rsquo;s lead in looking to other sections of the patent statute to find claims ineligible. What is surprising, however, is that several of the Federal Circuit&rsquo;s post-Alice decisions have not turned on whether the challenged claims recited well understood, routine, or conventional activities, but rather whether the claims recited how they accomplish their intended result &mdash; an inquiry not found in Mayo or Alice.<br />
+<br />
+For example, in Internet Patents v. Active Network, the Federal Circuit affirmed a Rule 12 dismissal of a case involving a patent for maintaining information in online forms.[9] In its analysis, the Federal Circuit acknowledged that the Mayo/Alice inventive concept inquiry is facilitated by considerations analogous to novelty and obviousness.[10] The Federal Circuit, however, did not use these considerations to find the claims ineligible.<br />
+<br />
+Rather, both the district court and the Federal Circuit applied considerations analogous to &sect;112. The district court found that the patent failed to disclose an example of a solution to the problem of navigating online multipage forms.[11] Adopting the district court&rsquo;s observation, the Federal Circuit found that the challenged claims contained no restriction on how to maintain the state of online forms.[12] Accordingly, the Federal Circuit viewed the claims as describing &ldquo;an effect or result dissociated from any method by which the maintaining state is accomplished.&rdquo;[13] Although these analyses seem more like an enablement or written description analysis than an eligibility analysis, neither the district court nor the Federal Circuit cited any authority for applying &sect;112 considerations to their eligibility determinations. The record also contained no evidence of how a person of ordinary skill in the art would have read the disclosure, despite the fact that the Supreme Court has held that &sect; 112 issues are to be &ldquo;evaluated from the perspective of someone skilled in the relevant art.&rdquo;[14]<br />
+<br />
+The Federal Circuit applied a similar inquiry in Electric Power Group v. <a href="/companies/alstom-sa">Alstom</a>. In affirming summary judgment of ineligibility of claims relating to the real-time monitoring of an electric power grid, the Federal Circuit stated that the inventive concept inquiry &ldquo;must turn to any requirements for how the desired result is achieved.&rdquo;[15] The court reasoned that the claims did not pass the &ldquo;how&rdquo; test because they simply recited gathering, sending, and presenting information using a conventional computer.[16] As in Internet Patents, the court cited no authority for the &ldquo;how&rdquo; test. In fact, the court did not even cite Internet Patents for the &ldquo;how&rdquo; test. The court even went a step further and proclaimed that examining whether the challenged claims cover any solution to the identified problem is a useful way to double check whether claims satisfy Mayo/Alice step two.[17]<br />
+<br />
+The Federal Circuit, however, has not limited its use of the &ldquo;how&rdquo; test to double check its step-two analysis. More recently, in <a href="/companies/intellectual-ventures">Intellectual Ventures</a> v. Capital One, the court affirmed summary judgment of ineligibility of claims relating to modifying XML documents using the &ldquo;how&rdquo; test.[18] The court found that the claims provided only a result-oriented solution and failed to recite sufficient detail for how a computer overcomes the stated incompatibility problems with XML documents.[19] The Federal Circuit based its finding on Electric Power.[20] But, as noted above, Electric Power cited no authority for infusing &sect;112 considerations into the inventive concept inquiry.<br />
+<br />
+Notwithstanding the foregoing cases, the Federal Circuit has not always mixed the patentability inquiry with the eligibility inquiry. In at least two instances post-Alice, the Federal Circuit stated that the patentability and eligibility inquiries are entirely separate. Ironically in both instances, and contrary to the cases blending these two inquiries, the Federal Circuit found the challenged claims patent-eligible.<br />
+<br />
+In Bascom v. ATT Mobility, the Federal Circuit vacated an order dismissing a case on grounds that the patent-in-suit, which related to filtering content on the Internet, claimed ineligible subject matter.[21] The Federal Circuit criticized the district court&rsquo;s ineligibility analysis because it was similar to an obviousness analysis.[22] The Federal Circuit held that the inventive concept inquiry required &ldquo;more than recognizing that each claim element, by itself, was known in the art.&rdquo;[23] Rather, the Federal Circuit explained that an inventive concept &ldquo;can be found in the non-conventional and non-generic arrangement of known, conventional pieces.&rdquo;[24] Thus, the Federal Circuit at least implicitly recognized that claims that may be obvious can still be patent-eligible.<br />
+<br />
+Notably, in her concurrence, Judge Pauline Newman explicitly distinguished between the eligibility inquiry and the patentability inquiry.[25] Judge Newman opined that emphasis on eligibility has led to erratic court decisions and thus advocated deciding patent cases on patentability grounds, not eligibility grounds.[26] Ironically, Judge Newman authored Internet Patents, in which, as noted above, she opined that eligibility determinations are facilitated by patentability determinations. In her concurrence, however, Judge Newman appeared to clarify her view, explaining that the only sure way to resolve whether a claim recites an ineligible abstract idea is to determine whether it meets the criteria of patentability.[27]<br />
+<br />
+In <a href="/companies/amdocs-ltd">Amdocs</a> v. <a href="/companies/openet-telecom-ltd">Openet Telecom</a>, the Federal Circuit also vacated an order dismissing a case on grounds that the four patents-in-suit, which related to a system that allows network service providers to account for and bill for internet protocol network communications, claimed ineligible subject matter.[28] In doing so, the Federal Circuit ruled that finding the challenged claims to be patent-eligible does not mean that they are valid.[29] The Federal Circuit expressly acknowledged that the claims had yet to be separately tested under the statutory conditions for patentability.[30]<br />
+<br />
+Yet while Amdocs drew a bright line between eligibility and patentability, it left open the possibility that patentability considerations could play a role in eligibility determinations. Despite recognizing the distinction between the eligibility inquiry and the novelty or obviousness inquiries in his dissent, Judge Jimmie Reyna opined that &ldquo;claims that fail to recite how a desired goal is accomplished do not recite an inventive concept.&rdquo;[31] The majority rejected Judge Reyna&rsquo;s approach but acknowledged that it could be a useful way of double checking whether claims satisfy Mayo/Alice step two.[32]<br />
+<br />
+<span style="font-size:16px;"><strong>Legislative Proposals</strong></span><br />
+<br />
+Because the Supreme Court&rsquo;s and Federal Circuit&rsquo;s recent &sect;101 jurisprudence has blurred the line between eligibility and patentability, three different bar associations &mdash; the <a href="/companies/american-bar-association">American Bar Association Section</a> of Intellectual Property Law, the <a href="/companies/ip-owners-association">Intellectual Property Owners Association</a> and the <a href="/companies/american-intellectual-property-law-association">American Intellectual Property Law Association &mdash;</a> have released legislative proposals aimed in part at maintaining the distinction between patentability and eligibility.[33] Each of these associations recognizes that this distinction is important for creating certainty about what is eligible for patenting, which in turn encourages investment in future innovations. Accordingly, each of their proposals contains an amendment to &sect;101 that provides for determining subject-matter eligibility without regard for the conditions and requirements of patentability.<br />
+<br />
+<span style="font-size:16px;"><strong>Conclusion</strong></span><br />
+<br />
+In conclusion, the Supreme Court injected ambiguity into the &sect;101 eligibility inquiry by drawing on considerations relevant to other sections of the patent statute. The Federal Circuit added further uncertainty to the inquiry by frequently applying &sect;112 considerations to its eligibility determinations. Unless these courts adopt a straightforward approach to their eligibility determinations that follows the letter of the patent statute, Congress may need to act to restore stability to the patent system.<br />
+<br />
+<hr style="margin-left:20%;margin-right:20%;" />
+<br />
+<a href="http://www.hudnelllaw.com/our-attorneys.html"><em>Lewis E. Hudnell III</em></a><em>&nbsp;is the founding principal of <a href="/firms/hudnell-law-group-pc">Hudnell Law Group PC</a>, an intellectual property law firm based in Mountain View, California.<br />
+<br />
+The opinions expressed are those of the author(s) and do not necessarily reflect the views of the firm, its clients, or Portfolio Media Inc., or any of its or their respective affiliates. This article is for general information purposes and is not intended to be and should not be taken as legal advice.</em><br />
+<br />
+[1] See 35 U.S.C. &sect; 101.<br />
+<br />
+[2] See 35 U.S.C. &sect;&sect;102 and 103.<br />
+<br />
+[3] See 35 U.S.C. &sect;112.<br />
+<br />
+[4] See Diamond v. Diehr, 450 U.S. 175, 189-90 (1981).<br />
+<br />
+[5] See Mayo Collaborative Servs. v. Prometheus Labs., Inc., 566 U.S. 66, 90 (2012).<br />
+<br />
+[6] See id. at 73.<br />
+<br />
+[7] See, e.g., Ameritox, Ltd. v. Millennium Health, LLC, 88 F.Supp.3d 885, 914 (W.D. Wis. 2015) (observing that &ldquo;&sect; 101 is effectively being used as a de facto &sect; 103 challenge,&rdquo; and stressing that, because &ldquo;the concern of hindsight has as much relevance to a &sect; 101 challenge as to a &sect; 103 challenge,&rdquo; &ldquo;evidence . . . helps to guard against hindsight bias&rdquo;); see also Raymond A. Mercado, Resolving Patent Eligibility and Indefiniteness in Proper Context: Applying Alice and Aristocrat, 20 Va. J.L. & Tech. 240, 330 (2016) (&ldquo;eligibility, as currently formulated under Mayo, more closely resembles an obviousness determination&mdash;though ultimately a question of law, it is &lsquo;based on underlying determinations of fact,&rsquo; most notably relating to the &lsquo;conventionality&rsquo; of the claims at Mayo/Alice Step Two.&rdquo;).<br />
+<br />
+[8] See Alice Corp. Pty. Ltd. v. CLS Bank Int&#39;l, 134 S. Ct. 2347, 2359 (2014).<br />
+<br />
+[9] See <a href="/companies/internet-patents-corp">Internet Patents Corp</a>. v. Active Network, Inc., 790 F.3d 1343 (Fed. Cir. 2015).<br />
+<br />
+[10] See id. at 1346-47.<br />
+<br />
+[11] See Internet Patents Corp. v. General Auto. Ins. Servs., 29 F. Supp. 3d 1264, 1269 (N.D. Cal. Sept. 24, 2013).<br />
+<br />
+[12] See Internet Patents, 790 F.3d at 1348.<br />
+<br />
+[13] See id.<br />
+<br />
+[14] Nautilus, Inc. v. Biosig Instruments, Inc., 134 S. Ct. 2120, 2128 (2014) (citation omitted); cf. Mercado, supra note 7 (arguing that &sect; 101 and &sect; 112 issues &ldquo;must be decided in context&rdquo; and &ldquo;[c]ontext demands that courts adopt the perspective of the skilled artisan&rdquo; rather than &ldquo;decid[ing] these issues in a vacuum&rdquo;).<br />
+<br />
+[15] See Elec. Power Group, LLC v. Alstom S.A., 830 F.3d 1350, 1335 (Fed. Cir. 2016) (emphasis in original).<br />
+<br />
+[16] Id.<br />
+<br />
+[17] Id.<br />
+<br />
+[18] See Intellectual Ventures I LLC v. Capital One Fin. Corp., 850 F.3d 1332 (Fed. Cir. 2017).<br />
+<br />
+[19] Id. at 1342.<br />
+<br />
+[20] Id.<br />
+<br />
+[21] See BASCOM Global Internet Servs. v. <a href="/companies/at-t-inc">AT&T Mobility LLC</a>, 827 F.3d 1341 (Fed. Cir. 2016).<br />
+<br />
+[22] Id. at 1349-50.<br />
+<br />
+[23] Id.<br />
+<br />
+[24] Id.<br />
+<br />
+[25] Id. at 1353-54.<br />
+<br />
+[26] Id. at 1353.<br />
+<br />
+[27] Id. at 1354.<br />
+<br />
+[28] See Amdocs (Isr.) Ltd. v. Openet Telecom, Inc., 841 F.3d 1288, 1290 (Fed. Cir. 2016).<br />
+<br />
+[29] Id. at 1306.<br />
+<br />
+[30] Id.<br />
+<br />
+[31] Id. at 1311.<br />
+<br />
+[32] Id. at 1295.<br />
+<br />
+[33] See AIPLA Legislative Report and Proposal on Patent Eligible Subject Matter http://www.aipla.org/resources2/reports/2017AIPLADirect/Documents/AIPLA%20Report%20on%20101%20Reform-5-19-17-Errata.pdf (last visited May 31, 2017) (&ldquo;AIPLA Proposal&rdquo;); Proposed Amendments to Patent Eligible Subject Matter under 35 U.S.C. &sect;101, http://www.ipo.org/wp-content/uploads/2017/02/20170207_IPO-101-TF-Proposed-Amendments-and-Report.pdf (last visited May 31, 2017); Supplemental Comments on Patent Subject Matter Eligibility to <a href="/agencies/u-s-patent-and-trademark-office">USPTO Director Michelle Lee</a>, https://www.americanbar.org/content/dam/aba/administrative/intellectual_property_law/advocacy/advocacy-20170328-comments.authcheckdam.pdf (last visited May 31, 2017) (&ldquo;ABA-IPL Proposal&rdquo;).
+			</div>
+		
+		<br /><br />
+	  	<p class="copyright">All Content &copy; 2003-2018, Portfolio Media, Inc.</p>        
+		<script type="text/javascript">window.print();</script>
+		<script type="text/javascript">
+	//GA Universal
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	//domain = 'www.law360.com';
+	ga('create', 'UA-3460073-1', 'auto', {'allowLinker': true});
+    ga('require', 'linker');
+    ga('linker:autoLink', ['law360.com','law360.co.uk'] );
+    ga('set', 'anonymizeIp', true);
+	ga('send', 'pageview');
+	ga('set', '&uid', "ozSeSWyfJo7TyeKwqSK1yFkk4tWR43u9r9tWMn6eC6A="); 
+
+			ga('set', 'dimension2', 'ozSeSWyfJo7TyeKwqSK1yFkk4tWR43u9r9tWMn6eC6A=');
+			ga('set', 'dimension11', '1137122');
+			ga('set', 'dimension8', '801616');
+			ga('set', 'dimension6', 'Login');
+			ga('set', 'dimension7', 'Unpaid');
+			ga('set', 'dimension9', 'Free-Trial');
+
+			ga('send', 'event', 'Article Actions', 'Article Printed' );
+	
+</script>
+
+
+
+	</body>
+</html>

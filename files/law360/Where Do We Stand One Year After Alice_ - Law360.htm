@@ -1,0 +1,467 @@
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+<script>window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"d4a97ca1fb","applicationID":"508316","transactionName":"dVhXEkFaCV5cSh5VQkJeWgpWRkpCS1FfQA==","queueTime":0,"applicationTime":31,"agent":""}</script>
+<script>(window.NREUM||(NREUM={})).loader_config={xpid:"VQcFVldUGwYAXFJTAQ=="};window.NREUM||(NREUM={}),__nr_require=function(t,n,e){function r(e){if(!n[e]){var o=n[e]={exports:{}};t[e][0].call(o.exports,function(n){var o=t[e][1][n];return r(o||n)},o,o.exports)}return n[e].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<e.length;o++)r(e[o]);return r}({1:[function(t,n,e){function r(t){try{s.console&&console.log(t)}catch(n){}}var o,i=t("ee"),a=t(15),s={};try{o=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(s.console=!0,o.indexOf("dev")!==-1&&(s.dev=!0),o.indexOf("nr_dev")!==-1&&(s.nrDev=!0))}catch(c){}s.nrDev&&i.on("internal-error",function(t){r(t.stack)}),s.dev&&i.on("fn-err",function(t,n,e){r(e.stack)}),s.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(s,function(t,n){return t}).join(", ")))},{}],2:[function(t,n,e){function r(t,n,e,r,s){try{p?p-=1:o(s||new UncaughtException(t,n,e),!0)}catch(f){try{i("ierr",[f,c.now(),!0])}catch(d){}}return"function"==typeof u&&u.apply(this,a(arguments))}function UncaughtException(t,n,e){this.message=t||"Uncaught error with no additional information",this.sourceURL=n,this.line=e}function o(t,n){var e=n?null:c.now();i("err",[t,e])}var i=t("handle"),a=t(16),s=t("ee"),c=t("loader"),f=t("gos"),u=window.onerror,d=!1,l="nr@seenError",p=0;c.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(h){"stack"in h&&(t(8),t(7),"addEventListener"in window&&t(5),c.xhrWrappable&&t(9),d=!0)}s.on("fn-start",function(t,n,e){d&&(p+=1)}),s.on("fn-err",function(t,n,e){d&&!e[l]&&(f(e,l,function(){return!0}),this.thrown=!0,o(e))}),s.on("fn-end",function(){d&&!this.thrown&&p>0&&(p-=1)}),s.on("internal-error",function(t){i("ierr",[t,c.now(),!0])})},{}],3:[function(t,n,e){t("loader").features.ins=!0},{}],4:[function(t,n,e){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var o=t("ee"),i=t("handle"),a=t(8),s=t(7),c="learResourceTimings",f="addEventListener",u="resourcetimingbufferfull",d="bstResource",l="resource",p="-start",h="-end",m="fn"+p,w="fn"+h,v="bstTimer",y="pushState",g=t("loader");g.features.stn=!0,t(6);var b=NREUM.o.EV;o.on(m,function(t,n){var e=t[0];e instanceof b&&(this.bstStart=g.now())}),o.on(w,function(t,n){var e=t[0];e instanceof b&&i("bst",[e,n,this.bstStart,g.now()])}),a.on(m,function(t,n,e){this.bstStart=g.now(),this.bstType=e}),a.on(w,function(t,n){i(v,[n,this.bstStart,g.now(),this.bstType])}),s.on(m,function(){this.bstStart=g.now()}),s.on(w,function(t,n){i(v,[n,this.bstStart,g.now(),"requestAnimationFrame"])}),o.on(y+p,function(t){this.time=g.now(),this.startPath=location.pathname+location.hash}),o.on(y+h,function(t){i("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),f in window.performance&&(window.performance["c"+c]?window.performance[f](u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["c"+c]()},!1):window.performance[f]("webkit"+u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["webkitC"+c]()},!1)),document[f]("scroll",r,{passive:!0}),document[f]("keypress",r,!1),document[f]("click",r,!1)}},{}],5:[function(t,n,e){function r(t){for(var n=t;n&&!n.hasOwnProperty(u);)n=Object.getPrototypeOf(n);n&&o(n)}function o(t){s.inPlace(t,[u,d],"-",i)}function i(t,n){return t[1]}var a=t("ee").get("events"),s=t(18)(a,!0),c=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";n.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(o(window),o(f.prototype)),a.on(u+"-start",function(t,n){var e=t[1],r=c(e,"nr@wrapped",function(){function t(){if("function"==typeof e.handleEvent)return e.handleEvent.apply(e,arguments)}var n={object:t,"function":e}[typeof e];return n?s(n,"fn-",null,n.name||"anonymous"):e});this.wrapped=t[1]=r}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],6:[function(t,n,e){var r=t("ee").get("history"),o=t(18)(r);n.exports=r,o.inPlace(window.history,["pushState","replaceState"],"-")},{}],7:[function(t,n,e){var r=t("ee").get("raf"),o=t(18)(r),i="equestAnimationFrame";n.exports=r,o.inPlace(window,["r"+i,"mozR"+i,"webkitR"+i,"msR"+i],"raf-"),r.on("raf-start",function(t){t[0]=o(t[0],"fn-")})},{}],8:[function(t,n,e){function r(t,n,e){t[0]=a(t[0],"fn-",null,e)}function o(t,n,e){this.method=e,this.timerDuration=isNaN(t[1])?0:+t[1],t[0]=a(t[0],"fn-",this,e)}var i=t("ee").get("timer"),a=t(18)(i),s="setTimeout",c="setInterval",f="clearTimeout",u="-start",d="-";n.exports=i,a.inPlace(window,[s,"setImmediate"],s+d),a.inPlace(window,[c],c+d),a.inPlace(window,[f,"clearImmediate"],f+d),i.on(c+u,r),i.on(s+u,o)},{}],9:[function(t,n,e){function r(t,n){d.inPlace(n,["onreadystatechange"],"fn-",s)}function o(){var t=this,n=u.context(t);t.readyState>3&&!n.resolved&&(n.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,y,"fn-",s)}function i(t){g.push(t),h&&(x?x.then(a):w?w(a):(E=-E,O.data=E))}function a(){for(var t=0;t<g.length;t++)r([],g[t]);g.length&&(g=[])}function s(t,n){return n}function c(t,n){for(var e in t)n[e]=t[e];return n}t(5);var f=t("ee"),u=f.get("xhr"),d=t(18)(u),l=NREUM.o,p=l.XHR,h=l.MO,m=l.PR,w=l.SI,v="readystatechange",y=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],g=[];n.exports=u;var b=window.XMLHttpRequest=function(t){var n=new p(t);try{u.emit("new-xhr",[n],n),n.addEventListener(v,o,!1)}catch(e){try{u.emit("internal-error",[e])}catch(r){}}return n};if(c(p,b),b.prototype=p.prototype,d.inPlace(b.prototype,["open","send"],"-xhr-",s),u.on("send-xhr-start",function(t,n){r(t,n),i(n)}),u.on("open-xhr-start",r),h){var x=m&&m.resolve();if(!w&&!m){var E=1,O=document.createTextNode(E);new h(a).observe(O,{characterData:!0})}}else f.on("fn-end",function(t){t[0]&&t[0].type===v||a()})},{}],10:[function(t,n,e){function r(t){var n=this.params,e=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<d;r++)t.removeEventListener(u[r],this.listener,!1);if(!n.aborted){if(e.duration=a.now()-this.startTime,4===t.readyState){n.status=t.status;var i=o(t,this.lastSize);if(i&&(e.rxSize=i),this.sameOrigin){var c=t.getResponseHeader("X-NewRelic-App-Data");c&&(n.cat=c.split(", ").pop())}}else n.status=0;e.cbTime=this.cbTime,f.emit("xhr-done",[t],t),s("xhr",[n,e,this.startTime])}}}function o(t,n){var e=t.responseType;if("json"===e&&null!==n)return n;var r="arraybuffer"===e||"blob"===e||"json"===e?t.response:t.responseText;return h(r)}function i(t,n){var e=c(n),r=t.params;r.host=e.hostname+":"+e.port,r.pathname=e.pathname,t.sameOrigin=e.sameOrigin}var a=t("loader");if(a.xhrWrappable){var s=t("handle"),c=t(11),f=t("ee"),u=["load","error","abort","timeout"],d=u.length,l=t("id"),p=t(14),h=t(13),m=window.XMLHttpRequest;a.features.xhr=!0,t(9),f.on("new-xhr",function(t){var n=this;n.totalCbs=0,n.called=0,n.cbTime=0,n.end=r,n.ended=!1,n.xhrGuids={},n.lastSize=null,p&&(p>34||p<10)||window.opera||t.addEventListener("progress",function(t){n.lastSize=t.loaded},!1)}),f.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),f.on("open-xhr-end",function(t,n){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&n.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),f.on("send-xhr-start",function(t,n){var e=this.metrics,r=t[0],o=this;if(e&&r){var i=h(r);i&&(e.txSize=i)}this.startTime=a.now(),this.listener=function(t){try{"abort"===t.type&&(o.params.aborted=!0),("load"!==t.type||o.called===o.totalCbs&&(o.onloadCalled||"function"!=typeof n.onload))&&o.end(n)}catch(e){try{f.emit("internal-error",[e])}catch(r){}}};for(var s=0;s<d;s++)n.addEventListener(u[s],this.listener,!1)}),f.on("xhr-cb-time",function(t,n,e){this.cbTime+=t,n?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof e.onload||this.end(e)}),f.on("xhr-load-added",function(t,n){var e=""+l(t)+!!n;this.xhrGuids&&!this.xhrGuids[e]&&(this.xhrGuids[e]=!0,this.totalCbs+=1)}),f.on("xhr-load-removed",function(t,n){var e=""+l(t)+!!n;this.xhrGuids&&this.xhrGuids[e]&&(delete this.xhrGuids[e],this.totalCbs-=1)}),f.on("addEventListener-end",function(t,n){n instanceof m&&"load"===t[0]&&f.emit("xhr-load-added",[t[1],t[2]],n)}),f.on("removeEventListener-end",function(t,n){n instanceof m&&"load"===t[0]&&f.emit("xhr-load-removed",[t[1],t[2]],n)}),f.on("fn-start",function(t,n,e){n instanceof m&&("onload"===e&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=a.now()))}),f.on("fn-end",function(t,n){this.xhrCbStart&&f.emit("xhr-cb-time",[a.now()-this.xhrCbStart,this.onload,n],n)})}},{}],11:[function(t,n,e){n.exports=function(t){var n=document.createElement("a"),e=window.location,r={};n.href=t,r.port=n.port;var o=n.href.split("://");!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=n.hostname||e.hostname,r.pathname=n.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname);var i=!n.protocol||":"===n.protocol||n.protocol===e.protocol,a=n.hostname===document.domain&&n.port===e.port;return r.sameOrigin=i&&(!n.hostname||a),r}},{}],12:[function(t,n,e){function r(){}function o(t,n,e){return function(){return i(t,[f.now()].concat(s(arguments)),n?null:this,e),n?void 0:this}}var i=t("handle"),a=t(15),s=t(16),c=t("ee").get("tracer"),f=t("loader"),u=NREUM;"undefined"==typeof window.newrelic&&(newrelic=u);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(d,function(t,n){u[n]=o(l+n,!0,"api")}),u.addPageAction=o(l+"addPageAction",!0),u.setCurrentRouteName=o(l+"routeName",!0),n.exports=newrelic,u.interaction=function(){return(new r).get()};var h=r.prototype={createTracer:function(t,n){var e={},r=this,o="function"==typeof n;return i(p+"tracer",[f.now(),t,e],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],e),o)try{return n.apply(this,arguments)}catch(t){throw c.emit("fn-err",[arguments,this,t],e),t}finally{c.emit("fn-end",[f.now()],e)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,n){h[n]=o(p+n)}),newrelic.noticeError=function(t){"string"==typeof t&&(t=new Error(t)),i("err",[t,f.now()])}},{}],13:[function(t,n,e){n.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(n){return}}}},{}],14:[function(t,n,e){var r=0,o=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);o&&(r=+o[1]),n.exports=r},{}],15:[function(t,n,e){function r(t,n){var e=[],r="",i=0;for(r in t)o.call(t,r)&&(e[i]=n(r,t[r]),i+=1);return e}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],16:[function(t,n,e){function r(t,n,e){n||(n=0),"undefined"==typeof e&&(e=t?t.length:0);for(var r=-1,o=e-n||0,i=Array(o<0?0:o);++r<o;)i[r]=t[n+r];return i}n.exports=r},{}],17:[function(t,n,e){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],18:[function(t,n,e){function r(t){return!(t&&t instanceof Function&&t.apply&&!t[a])}var o=t("ee"),i=t(16),a="nr@original",s=Object.prototype.hasOwnProperty,c=!1;n.exports=function(t,n){function e(t,n,e,o){function nrWrapper(){var r,a,s,c;try{a=this,r=i(arguments),s="function"==typeof e?e(r,a):e||{}}catch(f){l([f,"",[r,a,o],s])}u(n+"start",[r,a,o],s);try{return c=t.apply(a,r)}catch(d){throw u(n+"err",[r,a,d],s),d}finally{u(n+"end",[r,a,c],s)}}return r(t)?t:(n||(n=""),nrWrapper[a]=t,d(t,nrWrapper),nrWrapper)}function f(t,n,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<n.length;c++)s=n[c],a=t[s],r(a)||(t[s]=e(a,f?s+o:o,i,s))}function u(e,r,o){if(!c||n){var i=c;c=!0;try{t.emit(e,r,o,n)}catch(a){l([a,e,r,o])}c=i}}function d(t,n){if(Object.defineProperty&&Object.keys)try{var e=Object.keys(t);return e.forEach(function(e){Object.defineProperty(n,e,{get:function(){return t[e]},set:function(n){return t[e]=n,n}})}),n}catch(r){l([r])}for(var o in t)s.call(t,o)&&(n[o]=t[o]);return n}function l(n){try{t.emit("internal-error",n)}catch(e){}}return t||(t=o),e.inPlace=f,e.flag=a,e}},{}],ee:[function(t,n,e){function r(){}function o(t){function n(t){return t&&t instanceof r?t:t?c(t,s,i):i()}function e(e,r,o,i){if(!l.aborted||i){t&&t(e,r,o);for(var a=n(o),s=h(e),c=s.length,f=0;f<c;f++)s[f].apply(a,r);var d=u[y[e]];return d&&d.push([g,e,r,a]),a}}function p(t,n){v[t]=h(t).concat(n)}function h(t){return v[t]||[]}function m(t){return d[t]=d[t]||o(e)}function w(t,n){f(t,function(t,e){n=n||"feature",y[e]=n,n in u||(u[n]=[])})}var v={},y={},g={on:p,emit:e,get:m,listeners:h,context:n,buffer:w,abort:a,aborted:!1};return g}function i(){return new r}function a(){(u.api||u.feature)&&(l.aborted=!0,u=l.backlog={})}var s="nr@context",c=t("gos"),f=t(15),u={},d={},l=n.exports=o();l.backlog=u},{}],gos:[function(t,n,e){function r(t,n,e){if(o.call(t,n))return t[n];var r=e();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(t,n,e){function r(t,n,e,r){o.buffer([t],r),o.emit(t,n,e)}var o=t("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(t,n,e){function r(t){var n=typeof t;return!t||"object"!==n&&"function"!==n?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");n.exports=r},{}],loader:[function(t,n,e){function r(){if(!x++){var t=b.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&n))return u.abort();f(y,function(n,e){t[n]||(t[n]=e)}),c("mark",["onload",a()+b.offset],null,"api");var e=l.createElement("script");e.src="https://"+t.agent,n.parentNode.insertBefore(e,n)}}function o(){"complete"===l.readyState&&i()}function i(){c("mark",["domContent",a()+b.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(s=Math.max((new Date).getTime(),s))-b.offset}var s=(new Date).getTime(),c=t("handle"),f=t(15),u=t("ee"),d=window,l=d.document,p="addEventListener",h="attachEvent",m=d.XMLHttpRequest,w=m&&m.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:m,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1071.min.js"},g=m&&w&&w[p]&&!/CriOS/.test(navigator.userAgent),b=n.exports={offset:s,now:a,origin:v,features:{},xhrWrappable:g};t(12),l[p]?(l[p]("DOMContentLoaded",i,!1),d[p]("load",r,!1)):(l[h]("onreadystatechange",o),d[h]("onload",r)),c("mark",["firstbyte",s],null,"api");var x=0,E=t(17)},{}]},{},["loader",2,10,4,3]);</script>
+		<title>Where Do We Stand One Year After Alice? - Law360</title>
+		<style type="text/css" media="print" >
+		  <!--
+		  body {
+		    font-family:Verdana, Arial, Helvetica, sans-serif;
+		    font-size: 8pt;
+		    color: #000000;
+		    margin-left: .75in;
+		    margin-right: 0;
+		    margin-top: 0px;
+		    margin-bottom: 0;
+		    padding: 0;
+		  }
+		  -->
+		  </style>
+
+		  <style type="text/css" media="screen" >
+		  <!--
+		  body {
+		    font-family:Verdana, Arial, Helvetica, sans-serif;
+		    font-size: 10px;
+		    color: #000000;
+		    margin-left: 100px;
+		    margin-right: 20px;
+		    margin-top: 0px;
+		    margin-bottom: 20px;
+		    padding: 0px;
+		  }
+		  -->
+		  </style>
+
+		  <style type="text/css" media="screen,print" >
+		  <!--
+		  a, a:active, a:link, a:visited {  color: #000000; text-decoration: none;}
+		  a:hover {  text-decoration: underline;}
+
+		  h2 {
+		    font-family: Arial, sans-serif;
+		    font-size: 2.4em;
+		    line-height: 1.2em;
+		    font-weight: bold;
+		    margin-top: .5em;
+		    margin-bottom: .5em;
+		  }
+
+		  p {
+		    font-size: 1.2em;
+		    line-height: 2em;
+		    margin: 0 0 1.2em 0;
+		    text-indent: 0;
+		    text-align: justify;
+		  }
+
+		  .logo {
+		    text-align:right;
+		    margin-bottom: 0;
+		  }
+		  .publisher {
+		    text-align:right;
+		    font-size: 0.9em;
+		    line-height: 1.2em;	
+		    border-top: 1px solid #C4C4B6;
+		    border-bottom: 1px solid #C4C4B6;
+		    padding-top: .6em;
+		    padding-bottom: .6em;
+		  }
+
+		  .byLine {
+		  text-align:left;
+		  font-size:.9em !important;
+		  line-height:1em;
+		  padding-top:.3em;
+		  }
+
+		  .copyright {
+		    border-top: 1px solid #C4C4B6;
+		    font-size: .9em;
+		    line-height: 2.5em;	
+		  }
+			#PrintBody { font-size:13px; line-height:16px; }
+			
+			blockquote p {
+				line-height: 1em;
+				font-size: 1em;
+			}
+		  -->
+		</style>
+	</head>
+	<body class="printable">
+		<br/>
+	  		<p class="logo"><img alt="Law 360" height="100" src="https://d3o53eiyqmjn10.cloudfront.net/web/images/headings/logo.gif" width="205" /></p>
+	  	<p class="publisher"><b>Portfolio Media. Inc.</b> | 111 West 19th Street, 5th floor | New York, NY 10011 | www.law360.com<br />Phone: +1 646 783 7100 | Fax: +1 646 783 7161 | customerservice@law360.com</p>
+		    <h2>Where Do We Stand One Year After Alice?</h2>
+				
+			<div id="PrintBody">
+				Law360, New York (June 17, 2015,  8:27 PM EDT) -- In the debut of Law360&#39;s new Voices of the Bar series &mdash; which features leading experts discussing timely and important developments in the field of intellectual property law &mdash; we asked the panel to discuss where we stand one year after the <a href="/agencies/u-s-supreme-court">U.S. Supreme Court</a>&#39;s decision in Alice Corp. v. CLS Bank, and what the future might hold. Here are some thoughts from an array of litigators, patent prosecution specialists, copyright and trademark experts, in-house counsel, economists, former administrative patent judges, professors, former policymakers, regulators and more.<br />
+<br />
+<strong>Question:</strong> June 19 marks the first anniversary of the U.S. Supreme Court&#39;s decision in Alice Corp. v. CLS Bank. Where do we stand one year later and what does the future hold?<br />
+<br />
+<div style="clear:both;overflow:hidden;margin-bottom:20px;">
+	<strong>Kenneth Adamo, <a href="/firms/kirkland-ellis">Kirkland & Ellis LLP</a></strong><br />
+	<div class="image-box-left vertical" style="width:150px">
+		<img border="0" class="img-responsive" src="https://dlbjbjzgnk95t.cloudfront.net/0668000/668773/Adamo.jpg" /></div>
+	&quot;No U.S. Supreme Court patent case has ever had so large an effect in so short a time as Alice Corp. Pty. Ltd. v. CLS Bank Int&rsquo;l. Alice has become as much a defense tool of choice as has the <a href="/agencies/u-s-patent-and-trademark-office">U.S. Patent and Trademark Office</a>&#39;s new inter partes review proceedings. Precedent has carried Alice and its two-part test for analyzing patent validity under 35 USC &sect; 101 from strength to strength:<br />
+	<br />
+	<div style="margin-left: 40px;">
+		1. Alice is technology-agnostic: If the test is satisfied, biotech-related patents go down as well as computer software or business method patents;<br />
+		<br />
+		2. Alice&rsquo;s &sect; 101 inquiry is a threshold test, such that:<br />
+		&nbsp;</div>
+	<div style="margin-left: 80px;">
+		a. Courts routinely analyze one or more &ldquo;representative&rdquo; claims, not all claims in issue, when resolving &sect; 101 challenges;<br />
+		&nbsp;</div>
+	<div style="margin-left: 80px;">
+		b. The analysis is the same regardless of claim type: methods, processes, systems or otherwise;<br />
+		&nbsp;</div>
+	<div style="margin-left: 80px;">
+		c. Claim construction is not a mandatory component of Alice&rsquo;s application, nor is expert discovery or expert evidence;<br />
+		&nbsp;</div>
+	<div style="margin-left: 80px;">
+		d. A number of application vehicles are available to the invalidity challenger, e.g., motions under F.R. Civ. P. 12(b)(6), (c), 56(a) and even Rule 50 post-trial motions;<br />
+		&nbsp;</div>
+	<div style="margin-left: 80px;">
+		e. Section 101 invalidity is a legal issue. The burden of proof, as to any underlying fact issues, while potentially clear and convincing, is sometimes adjudicated under a preponderance standard, especially where Rule 12 (c) is the motion vehicle;<br />
+		&nbsp;</div>
+	<div style="margin-left: 40px;">
+		3. Trial judges are receptive to early &sect; 101 challenges, especially under Rule 12, saving discovery, Markman and complications believed endemic to patent cases. The Federal Circuit, save for one case, has affirmed trial court decisions finding invalidity.<br />
+		&nbsp;</div>
+	Absent an unforeseen intervention by Congress, one should expect Alice&rsquo;s penetration, application and favorable response from both federal trial judges and the Federal Circuit to continue, such that it&rsquo;s use as an invalidity tool of quick application and (mostly) certain effect will expand to the full limits of the law.&quot;</div>
+<br />
+<div style="clear:both;overflow:hidden;margin-bottom:20px;">
+	<strong>Richard Baker, <a href="http://www.newenglandip.com/">New England Intellectual Property LLC</a></strong><br />
+	<div class="image-box-left vertical" style="width:150px">
+		<img border="0" class="img-responsive" src="https://dlbjbjzgnk95t.cloudfront.net/0668000/668773/Baker.jpg" /></div>
+	&ldquo;June 19 marks the first anniversary of SCOTUS&rsquo;s Alice v. CLS Bank, and the world for software inventors and infringers is continuing to shift, as the impact of this seminal case filters through the intellectual property community. The first readings of the opinion ranged widely, from David Kappos declaring it a victory for software patents to others declaring software patents dead. A year later we still are uncertain. But much has changed.<br />
+	<br />
+	At the USPTO the number of rejections under 35 USC &sect;101 skyrocketed since Alice. The number of business method patents allowed by the USPTO dropped significantly. Patent prosecutors are learning new claim drafting techniques to avoid Alice&rsquo;s impact.<br />
+	<br />
+	The secondary market for software and business method patents dried up in the past year as buyers avoid the risks of ineligibility under &sect;101. A small number of contingency firms will still take software patents, on the theory that a court will issue a quick decision on eligibility under &sect;101. Most inventors avoid these arts and are waiting for further clarity.<br />
+	<br />
+	For almost every pending software or business method patent litigation, defendants have revised their attack to vigorously challenge the validity of the patents in light of Alice, with reasonable success. At the appellate level, the applicability of Alice is still being refined in various decisions. Before we fully understand the impact of Alice, some of these cases will need further direction from SCOTUS, particularly in regards to software claims.<br />
+	<br />
+	In the future, public companies with business method or software patents on their books will have to consider writing down the value of their portfolios to Alice. The valuations of companies that copy competitor&rsquo;s software will increase, and the value of, and investment in, first mover companies in the software and business method arts will continue to decrease.&rdquo;</div>
+<br />
+<div style="clear:both;overflow:hidden;margin-bottom:20px;">
+	<strong>Robert M. Barrett, <a href="/firms/k-l-gates">K&L Gates LLP</a></strong><br />
+	<div class="image-box-left vertical" style="width:150px">
+		<img border="0" class="img-responsive" src="https://dlbjbjzgnk95t.cloudfront.net/0668000/668773/Barrett.jpg" /></div>
+	&ldquo;One year later, it is clear that Alice&rsquo;s eligibility standard articulates a very fact-intensive framework. In nearly every case (in procurement and in litigation), credible arguments can be made for eligibility and ineligibility, with one district court recently noting that &ldquo;[i]f one looks at almost any patent from far enough away, it could arguably claim an abstract idea. For example, Alexander Graham Bell&#39;s patent [on the telephone] could be said to claim the abstract idea of oral communication. But his invention was not the concept of oral communication itself; it was a technological innovation that allowed a type of oral communication between people who could otherwise not communicate in that way.&rdquo; Messaging Gateway Solutions LLC v. <a href="/companies/amdocs-ltd">Amdocs Inc</a>., Case No. CV 14-732-RGA (D. Del. Apr. 15, 2015).<br />
+	<br />
+	This simple observation exemplifies the battles being waged in district courts and the Patent Office: advocates for eligibility argue that most or all of the claim language sets forth the essence of the invention, while advocates for ineligibility argue that the claims should be viewed from as far away as possible. The result is that advocacy has largely become an effort to find a prior desired result (i.e., a decision on eligibility or ineligibility) and argue that the claimed invention is similar to the claims at issue in the decision. The volume of precedent developed in one year and the continuing applicability of certain pre-Alice decisions has provided plenty of fertile ground for these kinds of arguments.<br />
+	<br />
+	The fact-specific nature of post-Alice eligibility disputes suggests a need for further guidance. If a subjective standard continues to govern eligibility, it is difficult to predict what further guidance could be offered. While a bright-line standard would be easier to apply, the impact of such a standard on innumerable existing patents could be drastic and could implicate constitutional property rights considerations. Unless and until such guidance is provided by Congress or the courts, attorneys will continue scouring past fact patterns in search of a similar pattern with the desired outcome.&rdquo;</div>
+<br />
+<div style="clear:both;overflow:hidden;margin-bottom:20px;">
+	<strong>Garrard R. Beeney, <a href="/firms/sullivan-cromwell">Sullivan & Cromwell LLP</a></strong><br />
+	<div class="image-box-left vertical" style="width:150px">
+		<img border="0" class="img-responsive" src="https://dlbjbjzgnk95t.cloudfront.net/0668000/668773/Beeney.jpg" /></div>
+	&ldquo;In the year that the Supreme Court unanimously decided Alice, the decision has had a significant &mdash; if somewhat confusing &mdash; effect in both the courts and the PTO. During the period, studies have indicated that the number of business method patents issued have declined by greater than 60 percent over similar pre-Alice periods, and the number of issued software patents have declined by approximately 15 percent. In the courts, Alice Section 101 motions are being granted almost 75 percent of the time, and one can extrapolate that the courts will address about 150 Alice motions in the next 12 months. Some have argued that CAFC panel decisions applying Alice are not in accord with one another (e.g., compare DDR and Ultramercial), but it is clear that the more narrow and detailed the claim, the more likely it is to be upheld.<br />
+	<br />
+	It also may be prudent to see Alice as part of the current debate (sometimes focused on nonpracticing entities) in Congress, the courts and among commentators about the state of patent law and the issuance of &ldquo;too many&rdquo; patents that are not truly inventive. A broader trend in courts seems to be an effort to send Congress a message that the courts can police the issue without legislative reform. Given the overwhelming likelihood that legislation will be passed and the lower number of business method and software patents being issued, the initial rate of patent invalidation under Alice may be higher than what may follow. Seemingly lost in the debate may be a better solution than amending the patent system which has served the United States quite well over the last two centuries: Hire additional professional examiners, pay them what they deserve to be paid, and give them time to adequately apply existing law to applications.&rdquo;</div>
+<br />
+<div style="clear:both;overflow:hidden;margin-bottom:20px;">
+	<strong>Andrew W. Carter, <a href="/companies/ocean-tomo-llc">Ocean Tomo LLC</a></strong><br />
+	<div class="image-box-left vertical" style="width:150px">
+		<img border="0" class="img-responsive" src="https://dlbjbjzgnk95t.cloudfront.net/0668000/668773/Carter.jpg" /></div>
+	&ldquo;Many believe the State Street case opened a floodgate of business method patent applications that the USPTO was ill-equipped to handle, resulting in a large number of poor quality patents. Has Alice substantially closed that gate? Will the pendulum swing too far and kill patents with true value? And will Alice ultimately have little impact on business method patents that have true technical innovation?<br />
+	<br />
+	Using the &ldquo;follow the money&rdquo; approach, Alice can be examined by looking at what both public and private markets tell us. The stock market provides a measure of the present consensus view of expected future events. We examined the post-Alice stock price movements of two classes of companies. The first was a collection of well-known companies that own some of the largest, most software-centric patent portfolios. The second was a cross-section of patent licensing and assertion companies. In both cases, no general post-Alice trend could be determined, which would imply that at least the public equity markets do not see a significant impact to Alice. However, we did note significant stock price declines of select companies due to litigation-related rulings. Combined, that would imply a neutral to potentially negative future outlook for patent value due to Alice.<br />
+	<br />
+	As for private money, the story is less analytical but more clear. The people we know tell us that litigation funding enterprises have reduced their search for and investment in business method patents and related assertions (both carrot and stick). If private equity really is the &ldquo;smart money&rdquo; (a hotly debated subject that is well beyond the scope of this publication), then this would be a clear indication of the chilling influence of Alice going forward.&rdquo;</div>
+<br />
+<div style="clear:both;overflow:hidden;margin-bottom:20px;">
+	<strong>Padmaja Chinta, <a href="/firms/cittone-demers">Cittone & Chinta LLP</a></strong><br />
+	<div class="image-box-left vertical" style="width:150px">
+		<img border="0" class="img-responsive" src="https://dlbjbjzgnk95t.cloudfront.net/0668000/668773/Chinta.jpg" /></div>
+	&ldquo;As happens often with Supreme Court decisions, the court elucidates a simple test hoping to resolve conflicting views on complex issues of law and leaves out the much needed detail to be ironed out by the lower courts. The court&rsquo;s opinion in Alice Corp v. CLS Bank was no different. The two-step test for patent eligibility framed in Alice appears simple: (i) Is the claim concept directed to an &ldquo;abstract idea&rdquo; and if so (ii) does the claim have an &ldquo;inventive concept&rdquo; or &ldquo;meaningful limitation&rdquo; to make it patent-eligible?<br />
+	<br />
+	But in the one year since Alice has come out, district courts have had a tough time coming to grips with what exactly is an abstract idea and what addition qualifies as an inventive concept. Alice has most often been invoked in software cases. Most of the software patents challenged under Alice have been invalidated with no uniform objective criteria discernable. How broadly or narrowly the courts have defined the patented concept or technology has determined the ultimate eligibility finding. For example, some courts have looked at the entire claim (OIP Tech v. Amazon) while others have stripped it down to just the novel elements (McRO v. Activision).<br />
+	<br />
+	So what does the future hold? Alice is certainly not a death-knell for software patents, but expect to see a lot more patents challenged under this standard. Early motions to dismiss based on subject matter jurisdiction will become the norm in responding to software patent infringement complaints. So will early summary judgment motions. Software patent plaintiffs, especially trolls, are thinking twice before asserting these patents. And defendants have and will become emboldened to challenge these patents rather than consider a quick settlement. The Federal Circuit will likely come up with some objective criteria to implement this test. That may take a while though.&rdquo;</div>
+<br />
+<div style="clear:both;overflow:hidden;margin-bottom:20px;">
+	<strong>T. Spence Chubb, <a href="http://www.tspencechubb.com/2.html"><a href="/firms/law-office-of-t-spence-chubb">Law Office of T. Spence Chubb</a></a></strong><br />
+	<div class="image-box-left vertical" style="width:150px">
+		<img border="0" class="img-responsive" src="https://dlbjbjzgnk95t.cloudfront.net/0668000/668773/Chubb.jpg" /></div>
+	&ldquo;One observation on Alice is that it has had relatively little impact on patent-based <a href="/agencies/international-trade-commission">U.S. International Trade Commission</a> investigations. Indeed, the ITC has yet to rule on an Alice defense, and no ITC Judge has decided a case based on Alice.&nbsp; While one judge (Sandra Lord) has denied a motion for summary determination based on Alice, Inv. 337-TA-925, Order 32 (5/19/15), the judge determined that issues of fact remained concerning claim construction that precluded summary determination.&nbsp;<br />
+	<br />
+	There is no institutional reason that ITC respondents, who have a long history of pleading &sect;101 defenses (often in boilerplate fashion), should not invoke Alice. The reason that Alice has not played a bigger role in 337 cases may be simply that the sampling size of completed ITC investigations is still too small.&nbsp;<br />
+	<br />
+	If Alice-based disputes continue to be rare at the ITC, the reason could relate to the commodity nature of the typical 337 article at issue. Section 337 requires products that are imported (e.g., unloaded at docks). Arguably abstract ideas, such as Alice Corp.&rsquo;s risk mitigation methods, are seldom the types of products that lead patent owners to turn to the ITC for protection.<br />
+	<br />
+	Other factors that could reduce Alice&rsquo;s impact on the ITC might be self-screening by complainants and filtering by the ITC&rsquo;s prefiling review process, which can minimize the number of vulnerable patents. Some complainants may be hesitant to bring method patents before the ITC until the Federal Circuit resolves the ITC&rsquo;s jurisdiction over induced infringement in the Suprema case.<br />
+	<br />
+	However, ITC cases can still encompass software implemented in hardware or otherwise contained in tangible media. There is no reason that Alice should not have a role to play in such cases. And Judge Lord&rsquo;s ruling suggests that Alice arguments can be handled in routine fashion by a straightforward application of the case&rsquo;s teachings.&rdquo;</div>
+<br />
+<div style="clear:both;overflow:hidden;margin-bottom:20px;">
+	<strong>Aaron Cooper, <a href="/firms/covington-burling">Covington & Burling LLP</a></strong><br />
+	<div class="image-box-left vertical" style="width:150px">
+		<img border="0" class="img-responsive" src="https://dlbjbjzgnk95t.cloudfront.net/0668000/668773/Cooper.jpg" /></div>
+	&ldquo;While the courts continue to struggle with Alice, the looming issue is how the USPTO will view computer-related patent applications in the longer term.<br />
+	<br />
+	The USPTO&rsquo;s interim guidance following Myriad (related to biotech patents) met with significant pushback from the patent bar last year. So far, we have not seen the same after Alice.<br />
+	<br />
+	If the USPTO maintains the view that Alice is really about abstract business methods related to financial obligations that just happen to involve a computer, the future will remain stable. If the USPTO begins rejecting a broader set of computer-related patents, regardless of whether they involve business methods or actual technology implemented through software, I expect we will see a serious and organized effort to amend Section 101.<br />
+	<br />
+	A legislative debate over Section 101 would be difficult at best. The flexibility provided by the current provision, when properly applied, can produce the best outcome. But the U.S. is the leader in software innovation precisely because software-enabled inventions are eligible for patent protection. If Alice were applied in a manner that deterred investment in software in the U.S., R&D investment would flow overseas &mdash; and the talent, and our leadership position, would follow. That is untenable.&rdquo;</div>
+<br />
+<div style="clear:both;overflow:hidden;margin-bottom:20px;">
+	<strong>Brian Dunne, <a href="http://www.olavidunne.com/"><a href="/firms/olavi-law-pc">Olavi Dunne LLP</a></a></strong><br />
+	<div class="image-box-left vertical" style="width:150px">
+		<img border="0" class="img-responsive" src="https://dlbjbjzgnk95t.cloudfront.net/0668000/668773/Duell.jpg" /></div>
+	&ldquo;Standing alone, the court&rsquo;s decision in Alice does little more than direct the Federal Circuit to establish clear 101 patentability standards and provide a &ldquo;high-level&rdquo; (put charitably, &ldquo;vacuous and circular&rdquo; might be a fairer characterization) framework for doing so. Given Alice&#39;s ambiguity and a clear opportunity to shape patentability standards going forward, it was unsurprising that from the date of its release and for months thereafter, the Alice decision was a disruptive force throughout the patent litigation landscape. There was a general understanding that Alice offered a new(ish), potentially useful tool for patent defendants and a new(ish), potentially substantial hurdle that needed to be addressed by patent plaintiffs, but beyond that, little seemed assured in the absence of Federal Circuit guidance.<br />
+	<br />
+	Unfortunately, a full year later, no clear Federal Circuit guidance has emerged. To be sure, the Federal Circuit has interpreted and applied Alice in multiple published opinions, some of which seem clear enough in isolation &mdash; for example, DDR Holdings (released in December 2014) largely succeeds in articulating a distinguishing principle between &ldquo;patent-ineligible abstract ideas&quot; and a patent-eligible &ldquo;claimed solution [...] necessarily rooted in computer technology ...&quot; But post-DDR Holdings panel decisions have muddied any potential clarity that was developing in late 2014, and taken together the Federal Circuit&rsquo;s Alice guidance provides little more than a grab-bag of confusing (if not contradictory) patentability holdings that don&rsquo;t meaningfully reduce the towering 101-related uncertainty facing not just patent litigants, but parties throughout the patent system.<br />
+	<br />
+	Given widespread tumult and confusion surrounding such a fundamental patent law issue, it would be easy to predict a clarifying edict in the coming year. But given the current patent law climate (including a multi-institution focus on NPEs), I&rsquo;m not sure that any &ldquo;fix&rdquo; is forthcoming. This is unfortunate.&rdquo;</div>
+<br />
+<div style="clear:both;overflow:hidden;margin-bottom:20px;">
+	<strong>Chuck Ebertin, <a href="/companies/intellectual-ventures">Intellectual Ventures LLC</a></strong><br />
+	<div class="image-box-left vertical" style="width:150px">
+		<img border="0" class="img-responsive" src="https://dlbjbjzgnk95t.cloudfront.net/0668000/668773/Ebertin.jpg" /></div>
+	&ldquo;Section 103 of the Patent Act arose from the inability of the Supreme Court to articulate a uniform test for determining whether an idea merited the award of a patent. Too many patents were being invalidated for lacking &ldquo;some mysterious ingredient connoted in the term &lsquo;invented.&rsquo;&rdquo; See The American Patent System: Report of the National Patent Planning Commission (June 18, 1943). In addressing reform, the commission noted that a &ldquo;promising improvement would be for Congress, by legislative enactment, to lay down a reasonable, understandable test by which inventions shall be judged both from the standpoint of the grant of the patent and the validity of the patent thereafter.&rdquo; Id. Section 103 was adopted to eliminate arbitrary adjudications of what was sufficient to constitute an invention. Giles Rich, Congressional Intent &mdash; Or, Who Wrote the Patent Act of 1952?, in Patent Procurement and Exploitation: Protecting Intellectual Rights 61-78 (1963) (<a href="/companies/the-great-atlantic-pacific-tea-company-inc">Great Atlantic & Pacific Tea Co</a>. &ldquo;clinched the determination to include in the bill what is now 35 U.S.C. &sect; 103, in order to get rid of the vague requirement of &lsquo;invention.&rsquo;&rdquo;).<br />
+	<br />
+	With Alice and Mayo, the Supreme Court has resurrected this problem, by requiring courts to employ a &ldquo;two-step&rdquo; analysis to &ldquo;search for an &lsquo;inventive concept.&rsquo;&rdquo; Alice Corp., 134 S.Ct. at 2355. Courts are now invalidating patent after patent using their own subjective views as to what is sufficiently inventive to be patent eligible instead of applying the objective standards set forth in section 103. Even some judges on the Federal Circuit are starting to realize that this resurrection is problematic: &ldquo;But for the sweeping language in the Supreme Court&rsquo;s Mayo opinion, I see no reason, in policy or statute, why this breakthrough invention should be deemed patent ineligible.&ldquo; DNA Diagnostic Center v. <a href="/companies/sequenom-inc">Sequenom Inc</a>. (Fed. Cir. June 12, 2015) (Linn concurring).&rdquo;</div>
+<br />
+<div style="clear:both;overflow:hidden;margin-bottom:20px;">
+	<strong>Maya M. Eckstein, <a href="/firms/hunton-andrews-kurth">Hunton & Williams LLP</a></strong><br />
+	<div class="image-box-left vertical" style="width:150px">
+		<img border="0" class="img-responsive" src="https://dlbjbjzgnk95t.cloudfront.net/0668000/668773/Eckstein.jpg" /></div>
+	&ldquo;The Alice decision radically changed patent litigation, setting NPEs on their heels. That can be seen in the sheer reduction in new infringement case filings and the inverse increase in Section 101 rulings finding patent claims unpatentable.<br />
+	<br />
+	That said, the Alice decision did not portend the end of patent litigation. Plaintiffs are becoming smarter about the patents they choose to enforce in litigation, pursuing patents less vulnerable to a Section 101 challenge. Additionally, there are open questions about the breadth with which some district courts are applying the Alice decision. And a few commentators have raised questions &mdash; yet to be raised in litigation (to my knowledge) &mdash; about whether Section 101 is even a valid statutory defense to patent infringement.<br />
+	<br />
+	There is little doubt that Alice and its progeny will continue to dominate patent litigation in the next few years. It will be interesting to see, though, how things shake out when open questions finally are answered.&rdquo;</div>
+<br />
+<div style="clear:both;overflow:hidden;margin-bottom:20px;">
+	<strong>D. Bartley Eppenauer, <a href="/firms/shook-hardy">Shook Hardy & Bacon LLP</a></strong><br />
+	<div class="image-box-left vertical" style="width:150px">
+		<img border="0" class="img-responsive" src="https://dlbjbjzgnk95t.cloudfront.net/0668000/668773/Eppenauer.jpg" /></div>
+	&ldquo;When Alice first came out, we heard from many commentators that software patents are all but dead in the water. And a cursory look at the media coverage of the nine Federal Circuit decisions and dozens of district court decisions since Alice could lead one to believe that the future is grim indeed for patenting any invention implemented on a computer. However, a closer look at the cases indicates a striking trend that is not well understood. That trend shows that software patents &mdash; those involving technological innovation utilizing computers and software &mdash; are faring relatively well overall and trouncing the outcomes on business method patents.<br />
+	<br />
+	Looking at the roughly 80 district court cases since Alice involving about 200 patents, the challenged patents that can be characterized as &ldquo;technical&rdquo; have survived in about two-thirds of the cases. By contrast, business method patents have been found ineligible more than 80 percent of the time. A similar trend is holding true at the USPTO. This suggests to me that financial and business method patents are indeed all but dead, but &ldquo;technical&rdquo; software patents are holding their own despite all of the uncertainty surrounding the impact of Alice.<br />
+	<br />
+	Realistically, we&rsquo;re likely years away from something close to clarity as we await further Federal Circuit, and possibly Supreme Court decisions. Given the unpredictability of outcomes and the uncertainty surrounding this issue generally, courts will increasingly face strong pressure to draw a clearer line between what is patentable and what is not. If the current trend is any indication, that line will separate software technology from abstract business methods and clarify that software inventions are eligible for patenting. For now, though, early reports about the death of software patents should be revised to describe software patents as being in stable condition with hopes for a full recovery.&rdquo;</div>
+<br />
+<div style="clear:both;overflow:hidden;margin-bottom:20px;">
+	<strong>Patrick A. Fitch, Intellectual Ventures LLC</strong><br />
+	<div class="image-box-left vertical" style="width:150px">
+		<img border="0" class="img-responsive" src="https://dlbjbjzgnk95t.cloudfront.net/0668000/668773/Fitch.jpg" /></div>
+	&ldquo;Alice reaffirmed Mayo&rsquo;s two-step analytical framework for determining patent eligibility. In practice, the Supreme Court&rsquo;s interest in &sect; 101 determinations may have had more effect than the text of the Alice opinion itself. District courts have seen a swift uptick in &sect; 101 motions on the pleadings, at summary judgment, and even after trial. The scope of these motions has also grown, with many blurring the lines between patent eligibility and novelty and enablement defenses typically reserved for &sect; 103 or &sect; 112.<br />
+	<br />
+	The Federal Circuit recently characterized many of the patents it has deemed ineligible under Alice as &ldquo;fundamental economic concepts.&rdquo; OIP Techs. Inc. v. <a href="/companies/amazon-com-inc">Amazon.com Inc</a>., No. 2012-1696, slip op. at 6 (Fed. Cir. June 11, 2015) (citing Alice Corp. Pty. Ltd. v. CLS Bank Int&rsquo;l, 134 S. Ct. 2347, 2357 (2014); Bilski v. Kappos, 561 U.S. 593, 611 (2010); Ultramercial Inc. v. <a href="/companies/hulu-llc">Hulu LLC</a>, 772 F.3d 709, 715 (Fed. Cir. 2014); Content Extraction & Transmission LLC v. <a href="/companies/wells-fargo-co">Wells Fargo Bank</a>, Nat&rsquo;l Ass&rsquo;n, 776 F.3d 1343, 1347 (Fed. Cir. 2014)). But how far beyond &ldquo;fundamental economic concepts&rdquo; will Alice reach? Lower courts and the USPTO Examining Corps appear to want more guidance about how to implement a reliable analytical process for &sect; 101 challenges, particularly regarding preemption and the interplay between novelty and eligibility. This guidance likely will come from the Federal Circuit. DDR Holdings set one stake in the ground: a patent addressing a problem &ldquo;necessarily rooted in computer technology&rdquo; that claims &ldquo;an inventive concept for resolving [a] particular Internet-centric problem&rdquo; passes muster. DDR Holdings LLC v. <a href="/companies/hotels-com">Hotels.com LP</a>, No. 2013-1505, slip op. at 20, 23 (Fed. Cir. Dec. 3, 2014). As the Federal Circuit calls more balls and strikes, lower courts and litigants should forge a more predictable path for applying Alice in future patent disputes.&rdquo;</div>
+<br />
+<div style="clear:both;overflow:hidden;margin-bottom:20px;">
+	<strong>Barry S. Goldsmith, <a href="/firms/miles-stockbridge">Miles & Stockbridge PC</a></strong><br />
+	<div class="image-box-left vertical" style="width:150px">
+		<img border="0" class="img-responsive" src="https://dlbjbjzgnk95t.cloudfront.net/0668000/668773/Goldsmith.jpg" /></div>
+	&ldquo;One year after the Alice decision, we remain in a confusing state where validity under &sect; 101 is unclear for any particular software-based patent or patent application. Of course, this confusion is not surprising, as the Alice decision was shockingly deficient in defining key terms such as &ldquo;abstract,&rdquo; &ldquo;routine conventional activities&rdquo; and &ldquo;fundamental economic concepts.&rdquo;<br />
+	<br />
+	We have a slew of post-Alice decisions that determine that these types of patents are invalid. Many of these decisions in the federal district courts have come in response to summary judgment motions, where no evidence was presented or considered. The general theme in these invalidity decisions is that the claims are &ldquo;abstract&rdquo; because they are similar to the claims in Alice, or some other related case, and the recited steps are &ldquo;conventional,&rdquo; without any evidence as to what makes the steps conventional. Because by far the majority of the decisions have resulted in invalid patents, there is very little right now to rely on when arguing that a patent or patent application is valid. This is particularly true when prosecuting a patent application that happens to be classified in one of the &ldquo;business method&rdquo; art units, where almost all claimed functionality is dismissed as &ldquo;conventional,&rdquo; no matter how complex or inventive.<br />
+	<br />
+	The future, just based on the odds that some patents will impress some judges based on technical complexity, will bring some meaningful decisions upholding validity. These decisions will hopefully provide some framework on when patent claim limitations are considered more than &ldquo;conventional,&rdquo; so that the heart of the validity analysis can move to where it belongs &mdash; comparing the claims to the prior art. <em>Any</em> future decisions that uphold the validity of a software patent under &sect; 101 will provide more clarity than what currently exists.&rdquo;</div>
+<br />
+<div style="clear:both;overflow:hidden;margin-bottom:20px;">
+	<strong>Naomi Jane Gray, <a href="/firms/siskind-boyd">Harvey Siskind LLP</a></strong><br />
+	<div class="image-box-left vertical" style="width:150px">
+		<img border="0" class="img-responsive" src="https://dlbjbjzgnk95t.cloudfront.net/0668000/668773/Gray.jpg" /></div>
+	&ldquo;Software patents are seemingly falling like dominoes following Alice v. CLS Bank. How can software creators protect their rights, now and in the future? By relying on another form of intellectual property that is showing no signs of evaporating &mdash; copyright protection.&nbsp;<br />
+	<br />
+	Copyright protects original works of authorship. The threshold for originality is low; the Supreme Court has held that a work is copyrightable if it possesses some &ldquo;spark&rdquo; of creativity, &ldquo;no matter how crude, humble or obvious.&rdquo; Copyright exists and is effective from the moment such works are created &mdash; in copyright parlance, when the work is &ldquo;fixed in a tangible medium of expression.&rdquo; Prompt registration, although not required for protection, offers significant benefits. Perhaps most importantly, a copyright owner must register before suing to enforce the copyright. If made within five years, the registration certificate constitutes prima facie evidence of ownership and authorship. Registration also entitles a copyright plaintiff to seek statutory damages and attorneys&rsquo; fees if made before the infringement commenced (or within three months of publication of the work). These financial incentives can make the difference between a viable claim and one that is too expensive to pursue.<br />
+	<br />
+	To be sure, copyright offers a different type of protection than patent law. Copyright protects the original expression of an idea, whereas patents protect useful inventions. Unlike patents, copyrights cannot protect processes or methods of operation, however novel. Beyond protecting software code, however, copyright can also protect the structure, sequence and organization of computer programs. Thus, as software patents come under increasing attack post-Alice, software creators should consider copyright protection for their works.&rdquo;</div>
+<br />
+<div style="clear:both;overflow:hidden;margin-bottom:20px;">
+	<strong>Hiroyuki Hagiwara, <a href="/firms/ropes-gray">Ropes & Gray LLP</a></strong><br />
+	<div class="image-box-left vertical" style="width:150px">
+		<img border="0" class="img-responsive" src="https://dlbjbjzgnk95t.cloudfront.net/0668000/668773/Hiro.jpg" /></div>
+	&ldquo;Two stories are developing. What&rsquo;s clear is it&rsquo;s now a lot easier to challenge and invalidate abstract method patents. As of April 20, 2015, post-Alice, the federal courts found patents ineligible in over 78 percent of cases where Section 101 eligibility was challenged. Similarly, the Patent Trial and Appeal Board has found patent claims ineligible in all (100 percent) of the issued written decisions addressing patent-eligibility under Section 101.<br />
+	<br />
+	What&rsquo;s unclear is how exactly to apply the so-called Mayo second step. As we now know, the Supreme Court mandates a two-step inquiry in determining patent-eligibility. First, determine whether the claim is directed to patent-ineligible abstract ideas. If so, decide whether any claim elements transform the nature of the claim into a patent-eligible application of that abstract idea. This second step is the search for an inventive concept or something significantly more than just a patent-ineligible concept. Even the Federal Circuit has admitted having difficulty in applying the Mayo second step.<br />
+	<br />
+	Some practitioners saw a light in DDR Holdings, where the court maintained patent-eligibility for method claims for generating a composite web page that combines certain visual elements of a host website with content of a third-party merchant because the claims were specific to resolving a new problem occurring only in the Internet commerce space, and not in the traditional store front context. Others may be struggling with <a href="/companies/ariosa-diagnostics-inc">Ariosa Diagnostics</a>, decided just days ago. Here, even a scientifically acclaimed breakthrough method for diagnosing paternally inherited cffDNA in a non-invasive manner could not pass the arguably sweeping nature of the Mayo second step.<br />
+	<br />
+	In the future, more abstract method patents will be invalidated. Precedents will develop on the application of the Mayo second step. Also, a policy debate may arise as to whether a breakthrough discovery like the method claims in Ariosa should be patent-protected at all.&rdquo;</div>
+<br />
+<div style="clear:both;overflow:hidden;margin-bottom:20px;">
+	<strong>Herbert D. Hart III, <a href="/firms/mcandrews-held">McAndrews Held & Malloy</a></strong><br />
+	<div class="image-box-left vertical" style="width:150px">
+		<img border="0" class="img-responsive" src="https://dlbjbjzgnk95t.cloudfront.net/0668000/668773/Hart.jpg" /></div>
+	&ldquo;The Alice decision did nothing to clarify the principles in the Mayo decision, and, one year later, the consequences of that failure have been far-reaching. Patent examiners, left with little guidance, are quick to jump to safety by rejecting claims whenever doubts arise. Petitions for covered business method patent review are commonly based on at least one patent-ineligibility argument, and the Patent Trial and Appeal Board, like examiners, would rather err on the side of finding ineligibility. Motions for summary judgment based on &sect; 101 in infringement cases are so common that one popular district court has prohibited them, absent a showing of good cause. Even the Federal Circuit finds itself shackled by &ldquo;the sweeping language of the test set out in Mayo&rdquo; as characterized by Judge Linn&rsquo;s concurrence in Ariosa Diagnostics Inc. v. Sequenom Inc., Nos. 2014-1139 and 2014-1144 (June 12, 2015).<br />
+	<br />
+	The inventors of the process claimed in Ariosa developed a process using a material ordinarily discarded and generally thought to be useless, but in which they discovered the presence of a component having extraordinary value in making diagnoses with high accuracy. In other words, they pursued what was thought to be a useless exercise, and, by doing so, benefited the public by providing a more reliable and safer diagnostic tool. But that invention was found patent-ineligible because the individual steps of the method were, in general, known and conventional ones. Analyzing a claim at that subdivided level &mdash; seemingly mandated by Mayo &mdash; leads to the perverse result that, by providing an enabling disclosure, an inventor provides the very ammunition needed to defeat patent-eligibility under Mayo. The future consequence is likely to be inventors reluctant to disclose their inventions because the promised consideration for that disclosure &mdash; limited exclusivity conferred by a patent &mdash; will now be out of reach.&rdquo;</div>
+<br />
+<div style="clear:both;overflow:hidden;margin-bottom:20px;">
+	<strong>John C. Jarosz, <a href="/companies/analysis-group-inc">Analysis Group Inc</a>.</strong><br />
+	<div class="image-box-left vertical" style="width:150px">
+		<img border="0" class="img-responsive" src="https://dlbjbjzgnk95t.cloudfront.net/0668000/668773/Jarosz_John_greybg.jpg" /></div>
+	&ldquo;The Supreme Court&#39;s Alice decision sparked a fire that continues to rage. The precise impacts have been difficult to isolate largely due to a host of recent legislative reform proposals, regulatory developments and court decisions. But there is little doubt that the decision has led to more critical, and certainly more careful, evaluation of business method patents. In some ways, it is unprecedented scrutiny.<br />
+	<br />
+	The greater uncertainty associated with the issuance and enforcement of software and Internet-related patents has lowered the value of those patents, and perhaps many others like them. That decline in value is attributable to two factors. First, though the commercial value of those patents may not have fallen, the probability of them being issued or enforced has fallen. Second, the costs of establishing the value of those patents has risen due to the need to effectively respond to emboldened motions to dismiss and for summary judgment.<br />
+	<br />
+	The greater uncertainty will likely lead to less patented inventions being pursued, issued and/or enforced. That is, at the margin, the payoff has been diminished. So will enthusiasm for investments in such projects. In fact, some existing prosecutions and enforcements are likely to be abandoned.<br />
+	<br />
+	A positive byproduct, perhaps intended, is likely to be higher quality and stronger software and Internet-based patented inventions. The Supreme Court has laid out a somewhat clearer path to obtaining and enforcing strong patents. That somewhat clearer path requires increased attention to the incremental advances of the invention, i.e., one that converts an abstract idea into a patent-eligible invention. And clearer incremental advances of patents may likely lead to stronger and better-articulated positions as to the commercial value (and resulting price or appropriate damages payment) for those patents.<br />
+	<br />
+	In short, the Alice decision has encouraged the issuance of better patents. Given the enormous uncertainties still existing with patent prosecution and enforcement, however, only time will tell whether real change is effectuated.&rdquo;</div>
+<br />
+<div style="clear:both;overflow:hidden;margin-bottom:20px;">
+	<strong>Dr. Scott Kamholz, <a href="/firms/foley-hoag">Foley Hoag LLP</a></strong><br />
+	<div class="image-box-left vertical" style="width:150px">
+		<img border="0" class="img-responsive" src="https://dlbjbjzgnk95t.cloudfront.net/0668000/668773/Kamholz.jpg" /></div>
+	&ldquo;The destructive wake of Alice &mdash; patents invalidated on the pleadings, for goodness&rsquo; sake &mdash; illustrates with painful clarity the need for some good &sect; 101 cases in which the only issue to be decided is patent eligibility, without doubts as to patentability lurking in the shadows. Alice&rsquo;s claims, like those of Bilski, Prometheus and many others, were simply bad claims that have made bad law. They struck anyone who studied them as obvious riffs on convention. Yet all the court had before it was an eligibility question. It is little wonder that the court, without prior art to cite in striking down the claims as obvious, resolved its doubts of those claims with the lone tool at its disposal: eligibility. The message between the lines was: an invention this obvious surely can&rsquo;t be eligible for a patent. That conflation of eligibility and patentability lies at the heart of today&rsquo;s woes.<br />
+	<br />
+	In this curiously postmodern patent system, many industries, data handling and biotechnology most alarmingly, face the ugly prospect of turning to trade secret as their sole form of intellectual property. They view secrecy as the only safe haven from a court that has retroactively stripped them of exclusivity to their faithfully disclosed inventions. Stop the dismemberment of the patent system now by bringing forward cases that present &sect; 101 issues analogous to those in the earlier cases but that don&rsquo;t leave us shaking our heads in disbelief at their obviousness. Bring to the court&rsquo;s attention inventions that impress and amaze us with their beneficial effects and yet are ineligible under the current &sect; 101 doctrine.&nbsp; Such cases, neatly isolating &sect; 101 from sections 102 and 103, will allow the court to appreciate the conflation tainting its earlier decisions and to resume a properly expansive view of &sect; 101 eligibility.&rdquo;</div>
+<br />
+<div style="clear:both;overflow:hidden;margin-bottom:20px;">
+	<strong>Mark A. Klapow, <a href="/firms/crowell-moring">Crowell & Moring LLP</a></strong><br />
+	<div class="image-box-left vertical" style="width:150px">
+		<img border="0" class="img-responsive" src="https://dlbjbjzgnk95t.cloudfront.net/0668000/668773/Klapow.jpg" /></div>
+	&ldquo;Even though Alice largely just confirmed the Supreme Court&rsquo;s prior jurisprudence on the patentable subject matter requirement of 35 U.S.C. &sect; 101, the decision is having a pretty dramatic impact on how Section 101 defenses are litigated. Before Alice, there were a few district court decisions granting dismissals or early summary judgment motions on this basis, but now the floodgates seem to have opened. However, both the courts and litigants are struggling a bit to identify the most appropriate procedural mechanism and the proper timing for resolving Section 101 challenges. Motions to dismiss under Rule 12(b)(6) and motions for judgment on the pleadings under Rule 12(c) hold out the promise of efficient and cost-effective disposal of cases, but there is language in Alice suggesting that there may be, at least in some cases, factual issues underlying the Section 101 analysis that may need to be developed more so than is typically feasible at the pleadings stage of a case. Similarly, at least some district court judges, such as Judge Gilstrap in the Eastern District of Texas, have been reluctant to rule on Section 101 challenges until after claim construction. It will be very interesting to watch how this develops at the district court level, and it won&rsquo;t be surprising if the Federal Circuit has something to say on the subject as more of these cases work their way up on appeal.&rdquo;</div>
+<br />
+<div style="clear:both;overflow:hidden;margin-bottom:20px;">
+	<strong>Christine E. Lehman, <a href="/firms/finnegan">Finnegan Henderson Farabow Garrett & Dunner LLP</a></strong><br />
+	<div class="image-box-left vertical" style="width:150px">
+		<img border="0" class="img-responsive" src="https://dlbjbjzgnk95t.cloudfront.net/0668000/668773/Lehman.jpg" /></div>
+	&ldquo;It has been a rough year for software patents. As many commentators expected, the Alice decision resulted in a dramatic increase in invalidation of claims under Section 101. Many of the invalidated claims have fit squarely into the Supreme Court&rsquo;s framework, because they involved tying an abstract idea to generic computer components. Patents directed to ideas such as a computer bingo game have predictably suffered. Many of the invalidated claims were asserted by non-practicing entities, and thus Alice seems to have answered the request of many amici before the court asking for relief from such lawsuits. District courts have also been willing to grant motions invalidating claims based on Section 101 at an early stage, granting numerous Rule 12(b)(6) and 12(c) motions, streamlining the application of the Alice test before discovery.<br />
+	<br />
+	These short-term effects are obvious and easy to quantify, but the long-term implications of the Alice test will play out in detail over the next few years. As the Federal Circuit noted in finding a patent did meet the Section 101 threshold, the line dividing eligible subject matter is not always clear. DDR Holdings LLC v. Hotels.com LP, 773 F.3d 1245 (Fed. Cir. 2014). Future cases, in which the Federal Circuit will attempt to harmonize the Section 101 decisions coming from the courts and the Patent Office, will hopefully offer some guidance for these harder cases. For now, there is still substantial uncertainty for innovative software inventions. Uncertainty devalues those inventions and discourages use of the patent process. More time is needed, however, to tell if the costs paid in devaluing patents covering a huge sector of our economy will be worth the price of Alice.&rdquo;</div>
+<br />
+<div style="clear:both;overflow:hidden;margin-bottom:20px;">
+	<strong>Patricia Martone, <a href="/firms/law-office-of-patricia-a-martone-pc">Law Office of Patricia A. Martone PC</a></strong><br />
+	<div class="image-box-left vertical" style="width:150px">
+		<img border="0" class="img-responsive" src="https://dlbjbjzgnk95t.cloudfront.net/0668000/668773/Martone.jpg" /></div>
+	&ldquo;The debate surrounding patentable subject matter is not new. But for owners of already issued patents falling into that amorphous group called &ldquo;business method&rdquo; patents, Alice is a game-changer. Before Alice, the patent office had issued large numbers of patents where, under the prior &ldquo;machine or transformation&rdquo; test, a business method was carried out by a computer. Now, Alice has made clear that this is no longer the right standard. See, e.g. discussion in DDR Holdings v. Hotels.com, 773 F.3d 1245, 1255-1260 (Fed. Cir. 2014). We can expect that significant numbers of these already issued patents, if litigated, will be invalidated on the ground that they claim abstract ideas and the computer implementations of those ideas do not &ldquo;add significantly more&rdquo; to the claim.<br />
+	<br />
+	However, there are a large number of software patents that should survive any Alice challenge. For example, in DDR Holdings, the Federal Circuit held that the patent at issue did not claim an abstract idea, but instead a solution &ldquo;necessarily rooted in computer technology&rdquo; to solve a problem &ldquo;specifically arising in the realm of computer networks.&rdquo; Id. at 1257.<br />
+	<br />
+	Finally, district court procedures will likely evolve. In the past year, a surprising number of motions to dismiss have been granted, in decisions discussing factual issues, made prior to claim construction, and without considering any facts other than the content of the patent. As district courts begin to implement fact finding in the claim construction process in the wake of Teva, patentees, at least some courts, may decide to have the issue of patent eligible subject matter be considered with claim construction and with a factual record if appropriate.&rdquo;</div>
+<br />
+<div style="clear:both;overflow:hidden;margin-bottom:20px;">
+	<strong>Gary Morris, <a href="/firms/morris-kamlay">Morris & Kamlay LLP</a></strong><br />
+	<div class="image-box-left vertical" style="width:150px">
+		<img border="0" class="img-responsive" src="https://dlbjbjzgnk95t.cloudfront.net/0668000/668773/Morris.jpg" /></div>
+	&ldquo;The Supreme Court issued the Alice decision without providing any real guidance on how to determine the difference between &ldquo;abstract ideas&rdquo; and patentable subject matter.<br />
+	<br />
+	Since the decision, we&rsquo;ve learned that any method claim can be characterized as &ldquo;abstract&rdquo; and thereby rendered invalid. Of course, not all 101 cases since Alice have invalidated claims. The real question isn&rsquo;t patentability at all, but rather obviousness, which is the amount of novelty that should be needed to justify patent protection. This was made plain in DDR Holdings, one of the few cases since Alice that upheld the claims as valid under Section 101. Although couched in terms of 101, Judge Chen&rsquo;s reasoning sounds much more like an obviousness argument: &ldquo;[the claims] do not merely recite the performance of some business practice known from the pre-Internet world along with the requirement to perform it on the Internet. Instead, the claimed solution is necessarily rooted in computer technology in order to overcome a problem specifically arising in the realm of computer networks.&rdquo; The phrases &ldquo;known from the pre-Internet world&rdquo; and &ldquo;overcome a problem&rdquo; are words about obviousness, not about patentability. Indeed, the Alice patents themselves could have been disposed of on obviousness grounds.<br />
+	<br />
+	Jean-Paul Sartre wrote, &ldquo;Evil is the product of the ability of humans to make abstract that which is concrete.&rdquo; Eventually, the courts will exploit the vagaries of Alice to return 101 to its properly low threshold. Meanwhile they will rely upon the same vagaries to properly invalidate some software patents that never should have been granted, and likely some deserving patents as well.&rdquo;</div>
+<br />
+<div style="clear:both;overflow:hidden;margin-bottom:20px;">
+	<strong>Dr. Mary K. Murray, <a href="/firms/hamilton-brook">Hamilton Brook Smith & Reynolds PC</a></strong><br />
+	<div class="image-box-left vertical" style="width:150px">
+		<img border="0" class="img-responsive" src="https://dlbjbjzgnk95t.cloudfront.net/0668000/668773/Murray.jpg" /></div>
+	&ldquo;In the year since the Supreme Court&rsquo;s ruling in Alice v. CLS Bank, the Court of Appeals for the Federal Circuit has held several patents invalid as failing to claim patent eligible subject matter. Neither the Supreme, the Court of Appeals for the Federal Circuit or district courts have provided much clarity as to what constitutes an &ldquo;inventive concept&rdquo; sufficient to render application of an abstract idea, a law of nature or a naturally occurring phenomena patent eligible. The Supreme Court&rsquo;s ruling in Alice, for example, heightens the vulnerability of many existing patents and may disincentivize filing of patent applications to many types of inventions, particularly those directed to so-called &ldquo;business methods.&rdquo; New examination guidelines by the United States Patent and Trademark Office based, in part, on Alice, are intended to assist patent applicants and examiners in identifying the limits of patent eligible subject matter under several sets of circumstances. However, it is likely that significant developments in this area of patent law remain. For example, the Federal Circuit&rsquo;s June 12, 2015, decision in Ariosa Diagnostics v. Sequenom makes clear that because a claimed method of detecting paternally inherited cell-free fetal DNA includes &ldquo;well-understood, conventional and routine&rdquo; steps, the method is not patent eligible under 35 U.S.C. &sect; 101. The analysis bears a resemblance to other statutory requirements for patentability, such as novelty and nonobviousness, and opens an additional door of vulnerability and doubt of what constitutes patent eligible subject matter. The challenges and debates of what is patent eligible will continue well into the future.&rdquo;</div>
+<strong>Paul Roeder, Hewlett-Packard Co.</strong><br />
+<div style="clear:both;overflow:hidden;margin-bottom:20px;">
+	<div class="image-box-left vertical" style="width:150px">
+		<img border="0" class="img-responsive" src="https://dlbjbjzgnk95t.cloudfront.net/0668000/668773/Roeder.jpg" /></div>
+	&ldquo;Alice and its progeny animated a defense to patent assertions, and created a hurdle to obtaining certain classes of patents, that previously had been overlooked. Application of the decision, both in court and in the PTO, made a substantial impact on the cases already in the application or the assertion/litigation pipelines. However, as the post-Alice boundaries of Section 101 patentability are being charted, the patent bar is adapting and adjusting. Applications will be written and prosecuted to at least appear to claim &ldquo;solutions to problems in the realm of computer networks,&rdquo; and the various investors in IT patent litigation will set aside their patents with Alice problems in favor of others. In short, while Alice has eliminated (properly) a class of patents that merely claimed a pre-Internet business practice performed on the Internet, over the long term it will not significantly alter the playing field for IT patent assertions. Other, more fundamental reforms are necessary.&rdquo;</div>
+<br />
+<div style="clear:both;overflow:hidden;margin-bottom:20px;">
+	<strong>Gary Rosen, <a href="http://logarpc.com/?page_id=3"><a href="/firms/law-offices-of-gary-a-rosen-pc">Law Offices of Gary A. Rosen PC</a></a></strong><br />
+	<div class="image-box-left vertical" style="width:150px">
+		<img border="0" class="img-responsive" src="https://dlbjbjzgnk95t.cloudfront.net/0668000/668773/Rosen.jpg" /></div>
+	&ldquo;If the purpose of Alice is, as the Supreme Court stated, preventing inventors from preempting fundamental &ldquo;building blocks of human ingenuity,&rdquo; it is proving to be a very blunt instrument. If, on the other hand, the court&rsquo;s unspoken intent was to graft a technologic arts requirement onto U.S. patent law, and to create a path for accused infringers to sidestep the laborious task of proving up lack of novelty or obviousness, Alice is succeeding splendidly on both fronts.<br />
+	<br />
+	Who will seriously argue that the patents already capsized in Alice&rsquo;s wake &mdash; including the method of guaranteeing performance of financial obligations that was before the court in Alice &mdash; appreciably limited human ingenuity or could cause any harm worse than temporarily impeding competition in a narrow commercial space? And is there any reason to doubt that most of these patents could be sunk with a robust anticipation or obviousness defense?<br />
+	<br />
+	I hazard this prediction: By the fifth anniversary of Alice, if not sooner, Federal Circuit Judge Robert Mayer&rsquo;s concurrences in Ultramercial v. Hulu (stating that Alice &ldquo;for all intents and purposes, set out a technological arts test for patent eligibility&rdquo;) and OIP Technologies v. Amazon.com (applying Alice at the threshold of litigation &ldquo;works to stem the tide of vexatious suits brought by the owners of vague and overbroad business method patents&rdquo;) will be widely regarded as having authoritatively and presciently distilled the essence of the Supreme Court&rsquo;s abstract idea jurisprudence.&rdquo;</div>
+<br />
+<div style="clear:both;overflow:hidden;margin-bottom:20px;">
+	<strong>Michael P. Sandonato, <a href="/firms/fitzpatrick-cella">Fitzpatrick Cella Harper & Scinto</a></strong><br />
+	<div class="image-box-left vertical" style="width:150px">
+		<img border="0" class="img-responsive" src="https://dlbjbjzgnk95t.cloudfront.net/0668000/668773/Sandonato.jpg" /></div>
+	&ldquo;Although one year has passed since the Supreme Court&rsquo;s landmark decision on patent eligibility in Alice Corp. Pty. Ltd. v. CLS Bank Int&rsquo;l, its impact is still being felt. Section 101 challenges against business method and software-based patents have become common both in the district courts and before the USPTO, and for good reason. For claims deemed to be directed to abstract ideas, Alice has eliminated reliance upon the use of &ldquo;conventional&rdquo; computer elements as grounds for patent eligibility. In consequence, there have been many successful Section 101 challenges following Alice. For business-related inventions, one may wonder whether Justice Sotomayor articulated what has so far proven to be the de facto standard in her concurring opinion, where she stated that &ldquo;a method of doing business does not qualify as a &lsquo;process&rsquo; under &sect; 101.&rdquo;<br />
+	<br />
+	Despite the apparent death knell for computer-based business method inventions that Alice has to date been perceived to represent, a number of patents have survived post-Alice Section 101 challenges, and it is these patents that may offer some clarity as to where the line delineating eligible inventions from ineligible ideas lies. For example, claims &ldquo;necessarily rooted in computer technology&rdquo; and directed to a computer-specific problem have been held patent-eligible, even if the underlying idea may appear abstract. Similarly, claims that include specific features that cannot be considered mental steps, such as tangible modifications to a physical structure, have survived a Section 101 challenge.<br />
+	<br />
+	Post-Alice, a bright-line test for determining patent eligibility is unlikely to result, and thus a level of uncertainty will remain as lower courts and the USPTO continue to apply Alice and its progeny. However, each new decision sheds further light onto what is and is not patent eligible. Further, as claim drafting evolves in response to Alice, it is reasonable to expect more post-Alice decisions upholding patent-eligibility to issue.&rdquo;</div>
+<br />
+<div style="clear:both;overflow:hidden;margin-bottom:20px;">
+	<strong>Mark Scarsi, <a href="/firms/milbank-tweed">Milbank Tweed Hadley & McCloy LLP</a></strong><br />
+	<div class="image-box-left vertical" style="width:150px">
+		<img border="0" class="img-responsive" src="https://dlbjbjzgnk95t.cloudfront.net/0668000/668773/Scarsi.jpg" /></div>
+	&ldquo;While many were skeptical that the test the Supreme Court espoused in Alice would lead to clarity, practitioners in jurisdictions all across the country nevertheless began to defend against patent claims by filing Alice motions readily and often early on in cases. This response has led to the invalidation of an unprecedented number of patents. This is particularly true at the Federal Circuit, where the vast majority of Alice decisions rejecting patents have been upheld.<br />
+	<br />
+	Unfortunately, courts, feeling overwhelmed by the sheer number of Alice motions, have begun taking steps to limit them. For instance, in the Northern District of California, at least one court has rejected an Alice defense because the defendant failed to include it in its local rule invalidity contention disclosures, suggesting that the defense is waived if not timely raised. Additionally, Judge Rodney Gilstrap of the Eastern District of Texas, with the busiest patent docket in the country, now requires that parties obtain leave of court before bringing an Alice challenge.<br />
+	<br />
+	The practical effect of efforts like these will likely lead to a reduced number of Alice motions filed in the future. Further, if defendants are unable to pursue the defense over the course of litigation, either because they fail to raise it in their invalidity contentions or are denied leave to file a related motion, they will be forced to appeal related opinions without a fully developed record, possibly making Alice a less effective defense at the appellate level. While one can certainly sympathize with busy judges trying to manage clogged dockets, it would be a shame if expediency got in the way of eliminating patents on unpatentable subject matter.&rdquo;</div>
+<br />
+<div style="clear:both;overflow:hidden;margin-bottom:20px;">
+	<strong>Jaime A. Siegel, <a href="/companies/acacia-research-corporation">Acacia Research Corp</a>.</strong><br />
+	<div class="image-box-left vertical" style="width:150px">
+		<img border="0" class="img-responsive" src="https://dlbjbjzgnk95t.cloudfront.net/0668000/668773/Siegel.jpg" /></div>
+	&ldquo;It is now one year after the Supreme Court&rsquo;s decision in Alice, and industry is still trying to calculate the effects. But, one effect is clear &mdash; tremendous value was destroyed with the stroke of a pen (or perhaps the tapping of the &lt;enter&gt; key). The big issue isn&rsquo;t really about the patent litigations that may have been resolved because of the sweeping rule of law set by the Alice court. The far more consequential issue is the effect of this ruling on innovators in the software space. For the past 20 or so years, software innovators engaged investors, or incurred debt, or have otherwise invested in their future based upon what they believed to be a secure asset &hellip; patents issued by the United States Patent and Trademark Office that bore a shiny gold seal and blue ribbon, which supposedly provided comfort that they were presumed to be valid. Those software innovators are now very likely looking at a collection of assets that have effectively lost not only their entire value but the cost of years of R&D, and legal and Patent Office fees. The idea that the government can go backwards and destroy such tremendous value with one court opinion will likely have even farther reaching and chilling implications on innovation in general. If the Supreme Court can destroy value in the software sector so quickly, perhaps such retroactive actions could be taken in any space. Will investors continue to be as willing to take a chance on early stage innovators that are expecting to protect their innovations with patents? Only time will tell.&rdquo;</div>
+<br />
+<div style="clear:both;overflow:hidden;margin-bottom:20px;">
+	<strong>Robert Stoll, <a href="/firms/drinker-biddle">Drinker Biddle & Reath LLP</a></strong><br />
+	<div class="image-box-left vertical" style="width:150px">
+		<img border="0" class="img-responsive" src="https://dlbjbjzgnk95t.cloudfront.net/0668000/668773/Stoll.jpg" /></div>
+	&ldquo;It has been a year since the Alice decision and the patent community is still unclear about its impact. When handed down, Alice was construed as a narrow holding that confirmed that patents on business methods could still be obtained. The court developed a two-prong test to evaluate the patent eligibility of business method claims. First, a determination is made as to whether the claim is drawn to an abstract idea. If it is not, the claims are deemed to be drawn to statutory subject matter and the Alice inquiry is complete. If the claims are deemed to be drawn to nonstatutory subject matter, the second prong is invoked and a determination needs to be made as to whether enough has been added to convert the abstract idea into patent eligible subject matter.<br />
+	<br />
+	The word &ldquo;software&rdquo; does not appear in the decision. But lower courts have been applying the test to computer implemented inventions and software and invalidating claims that the USPTO has been issuing for decades. Software is at the center of inventions drawn to safely landing airplanes, efficiently operating chemical plants, and minimizing the need for surgery and software is critical to our way of life. The uncertainty of the effects of this decision to software startup companies is making it difficult for them to get investor funding and will affect our economic growth in innovative technologies where we lead the world.<br />
+	<br />
+	Lower courts need to limit their application of Alice to the narrow purposes addressed in the holding or risk grave unintended consequences to our economy by applying this Alice test in a manner that would stifle research in emerging technologies.&rdquo;</div>
+<br />
+<div style="clear:both;overflow:hidden;margin-bottom:20px;">
+	<strong>David L. Suter, <a href="/firms/harness-dickey">Harness Dickey & Pierce PLC</a></strong><br />
+	<div class="image-box-left vertical" style="width:150px">
+		<img border="0" class="img-responsive" src="https://dlbjbjzgnk95t.cloudfront.net/0668000/668773/Suter.jpg" /></div>
+	&ldquo;The first anniversary of Alice Corporate Pty. Ltd v. CLS Bank International, et al., 573 U.S. ___&nbsp; (2014) doesn&rsquo;t merely invite analysis of its impact on software patents, but prompts reflection on the state of the patent system. Alice has been maligned as to its lack of specific consideration of software, and its failure to provide guidance on just what is an &ldquo;abstract&rdquo; idea. Nevertheless, it is being interpreted expansively by the lower courts and the Patent Office to severely constrain the patentability of software and business method inventions.<br />
+	<br />
+	What may be of greater concern is the broader trend. Alice is merely an extension of the Supreme Court&rsquo;s decisions in Association for Molecular Pathology v. <a href="/companies/myriad-genetics-inc">Myriad Genetics Inc</a>., 569 U.S. ___ (2013), as well as Bilski v. Kappos, 561 U.S. 593 (2010). No longer is utility the low threshold analysis it once was. Rather, utility is the touchstone of validity, confounding traditional utility concepts with novelty/obviousness, for any invention that has a kernel of &ldquo;abstract idea&rdquo; or &ldquo;natural phenomenon.&rdquo; The most recent example of this trend is seen in Ariosa Diagnostics v. Sequenom, 14-1139 (Fed. Cir. 2015), in which the Federal Circuit, citing Alice, held that methods for detecting fetal DNA in maternal blood lack utility, notwithstanding amplification and processing steps recited in the patent claims.<br />
+	<br />
+	Doubtless the impact of Alice will become clearer over time; equilibrium may be reached recognizing the viability of patents for protecting software, albeit with significant limitations. Meanwhile, though, the validity of thousands of heretofore valuable patents is in question. Perhaps many who believe that the patent system stifles innovation or denies access to basic discoveries celebrate this trend. However, many others who work in high technology industries are confronted with uncertainty that only serves to dampen the substantial investments needed to develop new technologies.&rdquo;</div>
+<br />
+<div style="clear:both;overflow:hidden;margin-bottom:20px;">
+	<strong>Steven Wong, The <a href="/companies/home-depot-inc">Home Depot Inc</a>.</strong><br />
+	<div class="image-box-left vertical" style="width:150px">
+		<img border="0" class="img-responsive" src="https://dlbjbjzgnk95t.cloudfront.net/0668000/668773/Wong.jpg" /></div>
+	&ldquo;One year into Alice, we still need clarity into what &ldquo;abstract&rdquo; and &ldquo;significantly more&rdquo; mean. This is especially important as to how Alice is applied in patent prosecution. I&rsquo;ve heard from many patent practitioners with similar frustrations &mdash; that there do not appear to be any objective standards in the way &sect; 101 rejections are handled and that &sect; 101 rejections are often set forth without adequate explanation. Applicants are often at the whim of the particular examiner, which can lead to significant variance and unpredictability of prosecution. The reality is that a creative examiner can characterize any software-based invention as abstract (even when the invention clearly isn&rsquo;t), and the limitations to such characterization should be established. I am hopeful that future PTAB/court decisions will shed light into objective standards that will allow prosecutors to more effectively advocate for their clients.&rdquo;<br />
+	<br />
+	<br />
+	<em>The opinions expressed are those of the author(s) and do not necessarily reflect the views of the firms, their clients, or Portfolio Media Inc., or any of their respective affiliates. This article is for general information purposes and is not intended to be and should not be taken as legal advice.</em></div>
+<br />
+
+			</div>
+		
+		<br /><br />
+	  	<p class="copyright">All Content &copy; 2003-2018, Portfolio Media, Inc.</p>        
+		<script type="text/javascript">window.print();</script>
+		<script type="text/javascript">
+	//GA Universal
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	//domain = 'www.law360.com';
+	ga('create', 'UA-3460073-1', 'auto', {'allowLinker': true});
+    ga('require', 'linker');
+    ga('linker:autoLink', ['law360.com','law360.co.uk'] );
+    ga('set', 'anonymizeIp', true);
+	ga('send', 'pageview');
+	ga('set', '&uid', "ozSeSWyfJo7TyeKwqSK1yFkk4tWR43u9r9tWMn6eC6A="); 
+
+			ga('set', 'dimension2', 'ozSeSWyfJo7TyeKwqSK1yFkk4tWR43u9r9tWMn6eC6A=');
+			ga('set', 'dimension11', '1137122');
+			ga('set', 'dimension8', '801616');
+			ga('set', 'dimension6', 'Login');
+			ga('set', 'dimension7', 'Unpaid');
+			ga('set', 'dimension9', 'Free-Trial');
+
+			ga('send', 'event', 'Article Actions', 'Article Printed' );
+	
+</script>
+
+
+
+	</body>
+</html>
