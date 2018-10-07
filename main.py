@@ -85,7 +85,7 @@ def get_text_links():
             i = 0
             while i + 2 < len(arr):
                 try: 
-                    title = scraper.scrape(arr[i+2],arr[1])[0].strip().encode('ascii', 'ignore') + "   " + entry
+                    title = scraper.scrape(arr[i+2],arr[1])[0].strip().encode('ascii', 'ignore') + " " + entry
                 except:
                     print arr
                     print i + 2
